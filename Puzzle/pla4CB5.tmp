@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxsbaxpwnjeps"]
+
+[ext_resource type="Script" path="res://Puzzle/player.gd" id="1_q6dac"]
+[ext_resource type="Texture2D" uid="uid://bv20altuh2dp3" path="res://icon.svg" id="2_gegy2"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_q6dac")
+
+[node name="PlayerSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_gegy2")
+centered = false
+
+[node name="MoveTimer" type="Timer" parent="."]

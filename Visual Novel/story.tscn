@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://hds0vnbgahmg"]
+
+[ext_resource type="Script" path="res://Visual Novel/story.gd" id="1_umvkh"]
+
+[node name="Story" type="Node"]
+script = ExtResource("1_umvkh")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://bogsicd0wq65d"]
+
+[ext_resource type="Script" path="res://Puzzle/puzzle.gd" id="1_8yify"]
+[ext_resource type="PackedScene" uid="uid://cxsbaxpwnjeps" path="res://Puzzle/player.tscn" id="2_h37na"]
+[ext_resource type="PackedScene" uid="uid://hejmofcy2rke" path="res://Puzzle/map.tscn" id="2_jwj7f"]
+[ext_resource type="PackedScene" uid="uid://bo841e3p4cqgp" path="res://Puzzle/enemy.tscn" id="4_rc3d2"]
+
+[node name="Puzzle" type="Node"]
+script = ExtResource("1_8yify")
+
+[node name="Map" parent="." instance=ExtResource("2_jwj7f")]
+
+[node name="Player" parent="." instance=ExtResource("2_h37na")]
+position = Vector2(958, 518)
+
+[node name="Enemy" parent="." instance=ExtResource("4_rc3d2")]
+position = Vector2(257, 448)
+
+[connection signal="turn_end" from="Player" to="Enemy" method="_on_player_turn_end"]
