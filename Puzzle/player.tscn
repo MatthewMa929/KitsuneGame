@@ -12,7 +12,7 @@ texture = ExtResource("2_gegy2")
 centered = false
 
 [node name="MoveTimer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.4
 one_shot = true
 
 [connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]

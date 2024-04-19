@@ -13,6 +13,9 @@ func _ready():
 	pass
 	
 func _physics_process(delta):
+	pass
+
+func move():
 	match state:
 		WAIT:
 			pass
@@ -23,5 +26,6 @@ func _physics_process(delta):
 		RUN:
 			pass
 
-func _on_player_turn_end():
-	pass
+
+func _on_puzzle_enemy_turn():
+	move()
