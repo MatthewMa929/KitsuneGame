@@ -11,12 +11,10 @@ script = ExtResource("1_8yify")
 [node name="Map" parent="." instance=ExtResource("2_jwj7f")]
 
 [node name="Player" parent="Map" instance=ExtResource("2_h37na")]
-position = Vector2(958, 518)
+position = Vector2(989, 529)
 
 [node name="Enemy" parent="Map" instance=ExtResource("4_rc3d2")]
-position = Vector2(257, 448)
+position = Vector2(288, 480)
 
 [connection signal="enemy_turn" from="." to="Map/Enemy" method="_on_puzzle_enemy_turn"]
 [connection signal="turn_end" from="Map/Player" to="." method="_on_player_turn_end"]
-
-[editable path="Map"]

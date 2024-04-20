@@ -10,7 +10,7 @@ var move_queue = [0, 0]
 signal turn_end(curr_pos)
 
 func _ready():
-	pass
+	position = Vector2(curr_pos[0]*64, curr_pos[1]*64)
 
 func _physics_process(delta):
 	move_queue = [0, 0]
