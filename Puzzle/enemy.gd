@@ -16,7 +16,7 @@ var torch_path_arr = []
 
 
 func _ready():
-	pass
+	print(position)
 	
 func _physics_process(delta):
 	pass
@@ -24,12 +24,14 @@ func _physics_process(delta):
 func move():
 	match state:
 		WAIT:
+			if torch_path_arr.size() < 5 and torch_path_arr.size() < 0:
+				state = LIGHT
 			if player_path_arr.size() < 7:
 				print("CHASE")
 				state = CHASE
 		CHASE:
-			if torch_path_arr.size() > 3:
-				pass
+			if torch_path_arr.size() < 5 and torch_path_arr.size() < 0:
+				state = LIGHT
 				#position = torch_path_arr[1]
 			elif player_path_arr.size() > 7:
 				print("WAIT")
@@ -39,7 +41,8 @@ func move():
 		WANDER:
 			pass
 		LIGHT:
-			pass
+			print(torch_path_arr)
+			#position = torch_path_arr[1]
 		RUN:
 			pass
 

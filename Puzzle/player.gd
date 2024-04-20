@@ -2,15 +2,15 @@ extends CharacterBody2D
 
 @onready var move_timer = $MoveTimer
 
-const SPEED = 64.0
 var can_move = true  # Control variable to manage turns
-var curr_pos = [15, 8]
+var curr_pos = [15.5, 8.5]
 var move_queue = [0, 0]
 
 signal turn_end(curr_pos)
 
 func _ready():
 	position = Vector2(curr_pos[0]*64, curr_pos[1]*64)
+	print(position)
 
 func _physics_process(delta):
 	move_queue = [0, 0]
