@@ -54,7 +54,7 @@ func _process(delta):
 func is_wall(pos):
 	var coords = Vector2i(pos[0], pos[1])
 	var cell = curr_level.get_cell_atlas_coords(0, coords)
-	if cell == Vector2i(0, 0): #or cell == Vector2i(2, 0):
+	if cell == Vector2i(0, 0) or cell == Vector2i(2, 0):
 		return true
 	return false
 
