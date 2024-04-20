@@ -30,7 +30,7 @@ func _physics_process(delta):
 			move_timer.start()
 
 	if Input.is_action_just_released("Turn"):
-		print(curr_pos)
+		#print(curr_pos)
 		can_move = true
 
 

@@ -24,14 +24,14 @@ func _physics_process(delta):
 func move():
 	match state:
 		WAIT:
-			if player_path_arr.size() < 6:
+			if player_path_arr.size() < 7:
 				print("CHASE")
 				state = CHASE
 		CHASE:
 			if torch_path_arr.size() > 3:
 				pass
 				#position = torch_path_arr[1]
-			elif player_path_arr.size() > 6:
+			elif player_path_arr.size() > 7:
 				print("WAIT")
 				state = WAIT
 			else:
