@@ -6,6 +6,7 @@ var cell_size = Vector2i(64, 64)
 
 var astar_grid = AStarGrid2D.new()
 var grid_size = Vector2i(18, 11)
+var torch_pos = []
 var torches = []
 var status = []
 
@@ -43,6 +44,7 @@ func make_grid():
 				torches.append(empty_spaces)
 				status.append(false)
 				#print(torches)
+	torch_pos = [torches[0][0], torches[1][0], torches[2][0]]
 
 func _process(delta):
 	for i in range(torches.size()):

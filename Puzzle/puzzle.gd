@@ -31,14 +31,23 @@ func _on_player_turn_end(curr_pos):
 		var closest = []
 		for fill in range(11*18):
 			closest.append(0)
-		for i in range(map.torches.size()):
-			for j in range(map.torches[i].size()):
+		for i in range(map.torches.size()): #All the torches
+			for j in range(map.torches[i].size()): #Torch position + All the directions the torch can be accessed
 				var path = get_path_arr(enemy.position, [map.torches[i][j][0]*64+32, map.torches[i][j][1]*64+32])
 				if path:
 					closest_arr[i][j] = path
+					#print(closest_arr)
 		for k in range(closest_arr.size()):
-			if closest.size() > closest_arr[k][1].size():
+			if closest_arr[k].size() > 2:
+				var direc_min = closest_arr[k][1]
+				for h in range(2, closest_arr[k].size()):
+					if direc_min.size() > closest_arr[k][h].size():
+						direc_min = closest_arr[k][h]
+				closest_arr[k][1] = direc_min
+			if closest.size() - 1 > closest_arr[k][1].size() && map.status[k]:
 				closest = closest_arr[k][1]
+				closest.append(map.torch_pos[k])
+				print(closest)
 		enemy.torch_path_arr = closest
 		emit_signal("enemy_turn")
 
@@ -50,3 +59,9 @@ func turn_on(pos):
 		if map.torches[i][0] == pos:
 			map.status[i] = true
 			print("On")
+
+func _on_enemy_turn_off(pos):
+	for i in range(map.torches.size()):
+		if map.torches[i][0] == pos:
+			map.status[i] = false
+			print("Off")
