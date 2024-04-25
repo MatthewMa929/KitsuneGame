@@ -3,11 +3,15 @@ extends Node
 #11x18
 
 signal enemy_turn
+signal lantern_moved(lantern_light)
 
 @onready var map = $Map
 @onready var tileMap = map.curr_level
 @onready var player = $Map/Player
 @onready var enemy = $Map/Enemy
+@onready var collidable = []
+
+var lantern_light = []
 
 func is_moveable(pos):
 	var coords = Vector2i(pos[0], pos[1])
@@ -26,6 +30,7 @@ func _on_player_turn_end(curr_pos):
 	if is_moveable(curr_pos):
 		player.position = Vector2(curr_pos[0]*64, curr_pos[1]*64)
 		player.curr_pos = curr_pos
+		make_light()
 		start_enemy_turn()
 
 func get_path_arr(pt1, pt2):
@@ -39,7 +44,32 @@ func turn_on(pos):
 			print("On")
 
 func start_enemy_turn():
+	update_collidable()
+	check_lit()
 	enemy.player_path_arr = get_path_arr(enemy.position, player.position)
+	get_torch_path()
+	emit_signal("enemy_turn")
+
+func _on_enemy_turn_off(pos):
+	for i in range(map.torches.size()):
+		if map.torches[i][0] == pos:
+			map.status[i] = false
+			print("Off")
+
+func check_lit():
+	var lit = 0
+	var unlit = 0
+	for i in range(map.status.size()):
+		if map.status[i]:
+			lit += 1
+		else:
+			unlit += 1
+	if lit > unlit:
+		enemy.can_chase = false
+	else:
+		enemy.can_chase = true
+
+func get_torch_path():
 	var closest_arr = map.torches.duplicate(true)
 	var closest = []
 	for fill in range(11*18):
@@ -50,9 +80,12 @@ func start_enemy_turn():
 			if path:
 				closest_arr[i][j] = path
 				#print(closest_arr)
+			else:
+				closest_arr[i][j] = closest
 	for k in range(closest_arr.size()):
 		if closest_arr[k].size() > 2:
 			var direc_min = closest_arr[k][1]
+			#print(direc_min)
 			for h in range(2, closest_arr[k].size()):
 				if direc_min.size() > closest_arr[k][h].size():
 					direc_min = closest_arr[k][h]
@@ -62,10 +95,20 @@ func start_enemy_turn():
 			closest.append(map.torch_pos[k])
 			#print(closest)
 	enemy.torch_path_arr = closest
-	emit_signal("enemy_turn")
 
-func _on_enemy_turn_off(pos):
-	for i in range(map.torches.size()):
-		if map.torches[i][0] == pos:
-			map.status[i] = false
-			print("Off")
+func update_collidable():
+	var lit = 0
+	var unlit = 0
+	for tor in range(map.torches.size()):
+		collidable.append(map.torches[tor])
+		if map.status[tor]:
+			lit += 1
+		else:
+			unlit += 1
+	collidable.append(player.position)
+
+func make_light():
+	lantern_light = map.direc_array(player.lantern_pos)
+	if player.has_lantern:
+		emit_signal("lantern_moved", lantern_light)
+		#print(lantern_light)

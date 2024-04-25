@@ -4,7 +4,10 @@ extends CharacterBody2D
 
 var can_move = true  # Control variable to manage turns
 var curr_pos = [15.5, 8.5]
+var curr_posi = [15.5*64, 8.5*64]
 var move_queue = [0, 0]
+var lantern_pos = curr_pos
+var has_lantern = true
 
 signal turn_end(curr_pos)
 
@@ -28,11 +31,17 @@ func _physics_process(delta):
 			var pending_pos = [curr_pos[0]+move_queue[0], curr_pos[1]+move_queue[1]]
 			emit_signal("turn_end", pending_pos)
 			move_timer.start()
-
+	
 	if Input.is_action_just_released("Turn"):
 		#print(curr_pos)
 		can_move = true
-
+	
+	if Input.is_action_just_pressed("P_Lantern"):
+		if lantern_pos == curr_pos:
+			has_lantern = not has_lantern
+	
+	if has_lantern:
+		lantern_pos = curr_pos
 
 func _on_move_timer_timeout():
 	can_move = true
