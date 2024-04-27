@@ -45,7 +45,7 @@ func turn_on(pos):
 
 func start_enemy_turn():
 	update_collidable()
-	check_lit()
+	enemy.can_chase = check_lit()
 	enemy.player_path_arr = get_path_arr(enemy.position, player.position)
 	get_torch_path()
 	emit_signal("enemy_turn")
@@ -65,9 +65,8 @@ func check_lit():
 		else:
 			unlit += 1
 	if lit > unlit:
-		enemy.can_chase = false
-	else:
-		enemy.can_chase = true
+		return false
+	return true
 
 func get_torch_path():
 	var closest_arr = map.torches.duplicate(true)

@@ -17,7 +17,7 @@ enum {
 var state = WAIT
 var player_path_arr = []
 var torch_path_arr = []
-var can_chase = true
+var can_chase = false
 
 
 func _ready():
@@ -29,15 +29,15 @@ func _physics_process(delta):
 func move():
 	match state:
 		WAIT:
-			if check_light():
-				change_state(LIGHT)
-			elif check_chase():
+			if check_chase():
 				change_state(CHASE)
-		CHASE:
-			if check_light():
+			elif check_light():
 				change_state(LIGHT)
-			elif check_chase():
+		CHASE:
+			if check_chase():
 				position = player_path_arr[1]
+			elif check_light():
+				change_state(LIGHT)
 			else:
 				change_state(WAIT)
 		LIGHT:
@@ -55,11 +55,12 @@ func move():
 			check_chase()
 
 func check_light():
-	#if torch_path_arr.size() < 5 and torch_path_arr.size() > 0:
-	return true
+	if torch_path_arr.size() > 0:
+		return true
 
 func check_chase():
-	if player_path_arr.size() < 7 && !player.has_lantern:
+	if player_path_arr.size() < 7 && can_chase && player_path_arr.size() > 1:
+		print(player_path_arr)
 		return true
 	return false
 

@@ -4,3 +4,9 @@
 
 [node name="Story" type="Node"]
 script = ExtResource("1_umvkh")
+text = "Hi"
+jumpToNode = "Story/NewNode"
+
+[node name="NewNode" type="Node" parent="."]
+script = ExtResource("1_umvkh")
+text = "Bye"

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://daxgl3tsgkhse"]
+[gd_scene load_steps=3 format=3 uid="uid://daxgl3tsgkhse"]
 
 [ext_resource type="Script" path="res://Visual Novel/VisualNovel.gd" id="1_6h3i0"]
+[ext_resource type="PackedScene" uid="uid://hds0vnbgahmg" path="res://Visual Novel/story.tscn" id="2_2uc5t"]
 
 [node name="VisualNovel" type="Node"]
 script = ExtResource("1_6h3i0")
@@ -20,3 +21,14 @@ layout_mode = 2
 [node name="BodyText" type="RichTextLabel" parent="Screen/BodyContainer"]
 layout_mode = 2
 text = "Text here"
+
+[node name="Story" parent="." instance=ExtResource("2_2uc5t")]
+
+[node name="TextTimer" type="Timer" parent="."]
+wait_time = 0.05
+
+[node name="DotTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="timeout" from="TextTimer" to="." method="_on_text_timer_timeout"]
+[connection signal="timeout" from="DotTimer" to="." method="_on_dot_timer_timeout"]

@@ -3,8 +3,7 @@ extends Node
 @onready var text_timer = $TextTimer
 @onready var dot_timer = $DotTimer
 @onready var talk_timer = $TalkTimer
-@onready var story = $Story
-@onready var curr = story
+@onready var curr = $Story
 @onready var body = $Screen/BodyContainer/BodyText
 
 var char_index = 0
@@ -12,13 +11,22 @@ var path_arr = [0]
 var bb_num = 0
 var talking = false
 
+func _ready():
+	body.text = curr.text
+
+func _process(delta):
+	if Input.is_action_just_pressed("Continue"):
+		newCurr(curr.jumpToNode)
+
 func newCurr(path):
 	curr = get_node(path)
 	path_arr.append(curr.name)  
 	char_index = 0
 	text_timer.start()
 	body.text = curr.text
+	print(curr.text)
 	body.visible_characters = char_index
+	print(body.visible_characters)
 	bb_num = 0
 	
 func _on_text_timer_timeout():
