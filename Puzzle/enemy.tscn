@@ -1,12 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bo841e3p4cqgp"]
 
 [ext_resource type="Script" path="res://Puzzle/enemy.gd" id="1_sqpx5"]
-[ext_resource type="Texture2D" uid="uid://bv20altuh2dp3" path="res://icon.svg" id="2_4ga1n"]
+[ext_resource type="Texture2D" uid="uid://by086ivgtec32" path="res://Sprites/placeholder_enemy.png" id="2_maqpd"]
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_sqpx5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 1.5708
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_4ga1n")
+texture = ExtResource("2_maqpd")

@@ -9,6 +9,7 @@ signal lantern_moved(lantern_light)
 @onready var tileMap = map.curr_level
 @onready var player = $Map/Player
 @onready var enemy = $Map/Enemy
+@onready var lantern = $Map/Lantern
 @onready var collidable = []
 
 var lantern_light = []
@@ -30,8 +31,16 @@ func _on_player_turn_end(curr_pos):
 	if is_moveable(curr_pos):
 		player.position = Vector2(curr_pos[0]*64, curr_pos[1]*64)
 		player.curr_pos = curr_pos
+	if !player.has_lantern:
+		lantern.visible = true
+		lantern.position = Vector2(lantern_light[0][0]*64, lantern_light[0][1]*64)
+	else:
+		player.lantern_pos = player.curr_pos
+		lantern.visible = false
 		make_light()
-		start_enemy_turn()
+		for i in range(lantern_light.size()):
+			tileMap.set_cell(0, lantern_light[i], 0, Vector2i(3, 0))
+	start_enemy_turn()
 
 func get_path_arr(pt1, pt2):
 	return map.astar_grid.get_point_path(Vector2i(pt1[0], pt1[1])/64, Vector2i(pt2[0], pt2[1])/64)
@@ -111,3 +120,4 @@ func make_light():
 	if player.has_lantern:
 		emit_signal("lantern_moved", lantern_light)
 		#print(lantern_light)
+

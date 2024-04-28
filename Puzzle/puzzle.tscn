@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bogsicd0wq65d"]
+[gd_scene load_steps=6 format=3 uid="uid://bogsicd0wq65d"]
 
 [ext_resource type="Script" path="res://Puzzle/puzzle.gd" id="1_8yify"]
 [ext_resource type="PackedScene" uid="uid://cxsbaxpwnjeps" path="res://Puzzle/player.tscn" id="2_h37na"]
 [ext_resource type="PackedScene" uid="uid://hejmofcy2rke" path="res://Puzzle/map.tscn" id="2_jwj7f"]
 [ext_resource type="PackedScene" uid="uid://bo841e3p4cqgp" path="res://Puzzle/enemy.tscn" id="4_rc3d2"]
+[ext_resource type="Texture2D" uid="uid://p4w8l4g5xpaj" path="res://Sprites/lantern.png" id="5_27f7d"]
 
 [node name="Puzzle" type="Node"]
 script = ExtResource("1_8yify")
@@ -15,6 +16,10 @@ position = Vector2(951, 543)
 
 [node name="Enemy" parent="Map" instance=ExtResource("4_rc3d2")]
 position = Vector2(288, 480)
+
+[node name="Lantern" type="Sprite2D" parent="Map"]
+texture = ExtResource("5_27f7d")
+centered = false
 
 [connection signal="enemy_turn" from="." to="Map/Enemy" method="_on_puzzle_enemy_turn"]
 [connection signal="lantern_moved" from="." to="Map" method="_on_puzzle_lantern_moved"]

@@ -77,6 +77,7 @@ func direc_array(cell_pos):
 func _on_puzzle_lantern_moved(lantern_light):
 	for i in range(1, old_lit.size()):
 		astar_grid.set_point_solid(old_lit[i], false)
+		curr_level.set_cell(0, old_lit[i], 0, Vector2i(1, 0))
 	for i in range(1, lantern_light.size()):
 		astar_grid.set_point_solid(lantern_light[i], true)
 	old_lit = lantern_light
