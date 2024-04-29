@@ -1,6 +1,6 @@
 extends Node2D
 #11x18
-@onready var curr_level = $TileMapA
+@onready var curr_level = $TileMapB
 
 var cell_size = Vector2i(64, 64)
 

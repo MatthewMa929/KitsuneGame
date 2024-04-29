@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bo841e3p4cqgp" path="res://Puzzle/enemy.tscn" id="4_rc3d2"]
 [ext_resource type="Texture2D" uid="uid://p4w8l4g5xpaj" path="res://Sprites/lantern.png" id="5_27f7d"]
 
-[node name="Puzzle" type="Node"]
+[node name="Puzzle" type="Node2D"]
 script = ExtResource("1_8yify")
 
 [node name="Map" parent="." instance=ExtResource("2_jwj7f")]

@@ -10,3 +10,5 @@ script = ExtResource("1_cbou0")
 [node name="Puzzle" parent="." instance=ExtResource("2_5twsc")]
 
 [node name="VisualNovel" parent="." instance=ExtResource("3_wrl3p")]
+
+[connection signal="switch_to_puzzle" from="VisualNovel" to="." method="_on_visual_novel_switch_to_puzzle"]

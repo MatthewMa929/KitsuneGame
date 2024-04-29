@@ -10,7 +10,9 @@
 default_font = ExtResource("3_mk78b")
 default_font_size = 32
 
-[node name="VisualNovel" type="Node"]
+[node name="VisualNovel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_6h3i0")
 metadata/_edit_vertical_guides_ = [1122.0, 30.0]
 

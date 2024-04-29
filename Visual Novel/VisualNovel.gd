@@ -1,4 +1,4 @@
-extends Node
+extends Control
 
 @onready var background = $Background
 @onready var text_timer = $TextTimer
@@ -8,6 +8,7 @@ extends Node
 @onready var dialogue_text = $DialogueTextLabel
 @onready var screen = $Screen
 
+signal switch_to_puzzle
 
 var dialogue_file = "res://Assets/kitsune_game_dialogue.json"
 var json_as_text = FileAccess.get_file_as_string(dialogue_file)
@@ -59,9 +60,9 @@ func newCurr(path):
 	for onscreen_char in onscreen_char_sprites:
 		if(onscreen_char) in curr_story_node.leavingChar:
 			removeChar(onscreen_char)
-		
 	
-	
+	if curr_story_node.specialEffect == "text to puzzle":
+		emit_signal("switch_to_puzzle")
 	
 	# do a special effect
 	
