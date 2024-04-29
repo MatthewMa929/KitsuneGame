@@ -26,11 +26,13 @@ func _ready():
 	print(position)
 	
 func _physics_process(delta):
-	if player.position == position && state != CHASE:
-		emit_signal("player_lost")
-		get_tree().reload_current_scene()
 	if player.position == position && state == CHASE:
+		emit_signal("player_lost")
+		print("lost")
+		#get_tree().reload_current_scene()
+	if player.position == position && state != CHASE:
 		emit_signal("player_won")
+		print("won")
 
 func move():
 	match state:
