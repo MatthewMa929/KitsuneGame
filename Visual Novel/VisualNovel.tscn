@@ -1,26 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://daxgl3tsgkhse"]
+[gd_scene load_steps=6 format=3 uid="uid://daxgl3tsgkhse"]
 
 [ext_resource type="Script" path="res://Visual Novel/VisualNovel.gd" id="1_6h3i0"]
 [ext_resource type="PackedScene" uid="uid://hds0vnbgahmg" path="res://Visual Novel/story.tscn" id="2_2uc5t"]
+[ext_resource type="FontFile" uid="uid://bmn3wfv7641q6" path="res://Assets/Fonts/ArchitectsDaughter-Regular.ttf" id="3_mk78b"]
+
+[sub_resource type="Theme" id="Theme_a8bir"]
+default_font = ExtResource("3_mk78b")
+default_font_size = 32
+
+[sub_resource type="QuadMesh" id="QuadMesh_ji7aa"]
 
 [node name="VisualNovel" type="Node"]
 script = ExtResource("1_6h3i0")
+metadata/_edit_vertical_guides_ = [1122.0, 30.0]
 
 [node name="Screen" type="VBoxContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+visible = false
+offset_left = 30.0
+offset_top = 431.0
+offset_right = 1125.0
+offset_bottom = 635.0
+scale = Vector2(0.997481, 1)
 
 [node name="ImageContainer" type="PanelContainer" parent="Screen"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
 [node name="BodyContainer" type="PanelContainer" parent="Screen"]
+modulate = Color(0.415686, 1, 0.427451, 0.568627)
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
-[node name="BodyText" type="RichTextLabel" parent="Screen/BodyContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Screen/BodyContainer"]
 layout_mode = 2
-text = "Text here"
+text = "hello
+"
 
 [node name="Story" parent="." instance=ExtResource("2_2uc5t")]
 
@@ -29,6 +43,21 @@ wait_time = 0.05
 
 [node name="DotTimer" type="Timer" parent="."]
 wait_time = 0.1
+
+[node name="DialogueTextLabel" type="RichTextLabel" parent="."]
+offset_left = 50.0
+offset_top = 476.0
+offset_right = 1102.0
+offset_bottom = 621.0
+theme = SubResource("Theme_a8bir")
+text = "(Good morning, Great Kiko)
+"
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(0.45098, 0.815686, 0.486275, 0.215686)
+position = Vector2(576, 546.75)
+scale = Vector2(1092, 175.5)
+mesh = SubResource("QuadMesh_ji7aa")
 
 [connection signal="timeout" from="TextTimer" to="." method="_on_text_timer_timeout"]
 [connection signal="timeout" from="DotTimer" to="." method="_on_dot_timer_timeout"]

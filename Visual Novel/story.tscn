@@ -4,9 +4,16 @@
 
 [node name="Story" type="Node"]
 script = ExtResource("1_umvkh")
-text = "Hi"
+text = "i am going to jump off of a fucking bridge if i have to keep doing this dont test me bitch i will do it
+"
 jumpToNode = "Story/NewNode"
 
 [node name="NewNode" type="Node" parent="."]
 script = ExtResource("1_umvkh")
-text = "Bye"
+text = "my stummy hurted
+"
+jumpToNode = "Story/StoryNode"
+
+[node name="StoryNode" type="Node" parent="."]
+script = ExtResource("1_umvkh")
+text = "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
