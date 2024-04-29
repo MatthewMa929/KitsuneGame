@@ -6,6 +6,8 @@ extends Control
 @onready var talk_timer = $TalkTimer
 @onready var curr_story_node = $Story
 @onready var dialogue_text = $DialogueTextLabel
+@onready var char_name_text = $CharNameTextLabel
+@onready var char_name_bg = $CharNameMeshBox
 @onready var screen = $Screen
 
 signal switch_to_puzzle
@@ -16,7 +18,6 @@ var dialogue_dict = JSON.parse_string(json_as_text)
 
 
 var char_index = 0
-var path_arr = [0]
 var bb_num = 0
 var talking = false
 var onscreen_char_sprites = []
@@ -41,30 +42,39 @@ func _process(delta):
 
 func newCurr(path):
 	curr_story_node = get_node(path)
-				#path_arr.append(curr_story_node.name)  
-	
-	# set up dialogue stuff
+
+# set up dialogue stuff
 	char_index = 0
 	dialogue_text.text = curr_story_node.text
 	dialogue_text.visible_characters = char_index
-		# if the line is an internal line, changes the color of the text
+	# if the line is an internal line, changes the color of the text
 	if "(" in dialogue_text.text:
 		dialogue_text.text = str("[color=#a6ccff]", dialogue_text.text, "[/color]")
-		
-	# set up visual stuff
-		# if the speaking character is not already oncreen, add them to the screen
+
+# set up visual stuff
+	# put name on screen
+	if curr_story_node.speakingChar == "":
+		char_name_bg.visible = false
+		char_name_text.text = ""
+	else:
+		char_name_bg.visible = true
+		char_name_text.text = curr_story_node.speakingChar
+
+	# if the speaking character is not already oncreen, add them to the screen
 	if curr_story_node.speakingChar not in onscreen_char_sprites:
 		if curr_story_node.speakingChar != "":
 			addNewCharacterSprite(curr_story_node.speakingChar)
-		# goes through all the characters on screen and removes the ones that are leaving
+	setSpeakingChar(curr_story_node.speakingChar)
+	# goes through all the characters on screen and removes the ones that are leaving
 	for onscreen_char in onscreen_char_sprites:
 		if(onscreen_char) in curr_story_node.leavingChar:
 			removeChar(onscreen_char)
-	
+
+# do a special effect
 	if curr_story_node.specialEffect == "text to puzzle":
 		emit_signal("switch_to_puzzle")
 	
-	# do a special effect
+
 	
 	text_timer.start()
 	bb_num = 0
@@ -127,10 +137,23 @@ func drawNewSprite(schar):
 	new_char_sprite.texture = load(str("res://Sprites/", schar,".png"))
 	new_char_sprite.scale *= 0.5
 	new_char_sprite.name = schar
-	new_char_sprite.position = Vector2(screen_size.x/4 * onscreen_char_sprites.size(), screen_size.y - (new_char_sprite.texture.get_height()/4))
-	#new_char_sprite.z_as_relative = -100
+	var x_pos = screen_size.x/2
+	if onscreen_char_sprites.size() == 1:
+		x_pos = screen_size.x/5+50
+	elif onscreen_char_sprites.size() == 2:
+		x_pos = screen_size.x /5*4-50
+	new_char_sprite.position = Vector2(x_pos, screen_size.y - (new_char_sprite.texture.get_height()/4))
+	new_char_sprite.z_as_relative = 0
 	add_child(new_char_sprite)
 	print("add new char ", schar)
+	print(onscreen_char_sprites)
+
+func setSpeakingChar(speaking_char):
+	
+	if speaking_char == "":
+		return
+	var speaking = get_node(speaking_char)
+	speaking.scale *= 1.1
 
 func removeChar(char_to_remove):
 	

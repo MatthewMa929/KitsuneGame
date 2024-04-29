@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://daxgl3tsgkhse"]
+[gd_scene load_steps=8 format=3 uid="uid://daxgl3tsgkhse"]
 
 [ext_resource type="Script" path="res://Visual Novel/VisualNovel.gd" id="1_6h3i0"]
 [ext_resource type="PackedScene" uid="uid://hds0vnbgahmg" path="res://Visual Novel/story.tscn" id="2_2uc5t"]
@@ -9,6 +9,12 @@
 [sub_resource type="Theme" id="Theme_a8bir"]
 default_font = ExtResource("3_mk78b")
 default_font_size = 32
+
+[sub_resource type="QuadMesh" id="QuadMesh_u416w"]
+
+[sub_resource type="Theme" id="Theme_recq7"]
+default_font = ExtResource("3_mk78b")
+default_font_size = 40
 
 [node name="VisualNovel" type="Control"]
 layout_mode = 3
@@ -49,7 +55,7 @@ wait_time = 0.035
 [node name="DotTimer" type="Timer" parent="."]
 wait_time = 0.1
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+[node name="DialogueMeshBox" type="MeshInstance2D" parent="."]
 modulate = Color(0.0666667, 0.160784, 0.196078, 0.909804)
 z_index = 2
 position = Vector2(576, 546.75)
@@ -67,6 +73,23 @@ theme = SubResource("Theme_a8bir")
 bbcode_enabled = true
 text = "(Good morning, Great Kiko)
 "
+
+[node name="CharNameMeshBox" type="MeshInstance2D" parent="."]
+modulate = Color(0.0823529, 0.168627, 0.117647, 0.909804)
+z_index = 2
+position = Vector2(219.5, 427.625)
+scale = Vector2(379, 63.25)
+mesh = SubResource("QuadMesh_u416w")
+
+[node name="CharNameTextLabel" type="RichTextLabel" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 67.0
+offset_top = 397.0
+offset_right = 375.0
+offset_bottom = 458.0
+theme = SubResource("Theme_recq7")
+text = "Daiko Kusanagi"
 
 [connection signal="timeout" from="TextTimer" to="." method="_on_text_timer_timeout"]
 [connection signal="timeout" from="DotTimer" to="." method="_on_dot_timer_timeout"]
