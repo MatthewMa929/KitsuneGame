@@ -48,13 +48,11 @@ wait_time = 0.1
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 modulate = Color(0.0666667, 0.160784, 0.196078, 0.909804)
-z_index = 2
 position = Vector2(576, 546.75)
 scale = Vector2(1092, 175.5)
 mesh = SubResource("QuadMesh_ji7aa")
 
 [node name="DialogueTextLabel" type="RichTextLabel" parent="."]
-z_index = 2
 offset_left = 50.0
 offset_top = 476.0
 offset_right = 1102.0

@@ -1,5 +1,6 @@
 extends Node
 
+@onready var background = $Background
 @onready var text_timer = $TextTimer
 @onready var dot_timer = $DotTimer
 @onready var talk_timer = $TalkTimer
@@ -12,6 +13,7 @@ var dialogue_file = "res://Assets/kitsune_game_dialogue.json"
 var json_as_text = FileAccess.get_file_as_string(dialogue_file)
 var dialogue_dict = JSON.parse_string(json_as_text)
 
+
 var char_index = 0
 var path_arr = [0]
 var bb_num = 0
@@ -19,6 +21,10 @@ var talking = false
 var onscreen_char_sprites = []
 
 func _ready():
+	var screen_size = get_viewport().size
+	var center = Vector2(screen_size.x/2, screen_size.y/2)
+	background.texture = load("res://Assets/Background_Forest.png")
+	background.position = center
 	makeStoryNodes()
 	dialogue_text.text = curr_story_node.text
 	curr_story_node.jumpToNode = str("Story/line0")
@@ -47,7 +53,8 @@ func newCurr(path):
 	# set up visual stuff
 		# if the speaking character is not already oncreen, add them to the screen
 	if curr_story_node.speakingChar not in onscreen_char_sprites:
-		addNewCharacterSprite(curr_story_node.speakingChar)
+		if curr_story_node.speakingChar != "":
+			addNewCharacterSprite(curr_story_node.speakingChar)
 		# goes through all the characters on screen and removes the ones that are leaving
 	for onscreen_char in onscreen_char_sprites:
 		if(onscreen_char) in curr_story_node.leavingChar:
@@ -101,16 +108,29 @@ func makeStoryNodes():
 		curr_story_node.add_child(story_node)
 
 func addNewCharacterSprite(schar):
+	# is there a better way to do this? yes, but i will most likely never figure that out
 	if "???" in schar:
-		schar = schar.substr(schar.find("("), schar.find(")"))
-		onscreen_char_sprites.append(schar)
+		if "(" in schar:
+			var len_schar = schar.find(")") - schar.find("(")
+			schar = schar.substr(schar.find("(") + 1, len_schar-1)
+			onscreen_char_sprites.append(schar)
+		else:
+			return
 	else:
 		onscreen_char_sprites.append(schar)
+	drawNewSprite(schar)
+
+func drawNewSprite(schar):
+	var screen_size = get_viewport().size
 	var new_char_sprite = Sprite2D.new()
 	new_char_sprite.texture = load(str("res://Sprites/", schar,".png"))
 	new_char_sprite.scale *= 0.5
+	new_char_sprite.name = schar
+	new_char_sprite.position = Vector2(screen_size.x/4 * onscreen_char_sprites.size(), screen_size.y - (new_char_sprite.texture.get_height()/4))
+	#new_char_sprite.z_as_relative = -100
 	add_child(new_char_sprite)
 	print("add new char ", schar)
 
 func removeChar(char_to_remove):
+	
 	pass
