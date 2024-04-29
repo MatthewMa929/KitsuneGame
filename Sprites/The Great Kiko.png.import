@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjmvq4855idc"
-path="res://.godot/imported/Chiyo_Morimiya.png-26ab977a686e302bf626cd1e92d32014.ctex"
+uid="uid://ctmgyrk8ftjls"
+path="res://.godot/imported/The Great Kiko.png-154e514cd2a12675f8c07407c9c19c99.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Chiyo_Morimiya.png"
-dest_files=["res://.godot/imported/Chiyo_Morimiya.png-26ab977a686e302bf626cd1e92d32014.ctex"]
+source_file="res://Sprites/The Great Kiko.png"
+dest_files=["res://.godot/imported/The Great Kiko.png-154e514cd2a12675f8c07407c9c19c99.ctex"]
 
 [params]
 

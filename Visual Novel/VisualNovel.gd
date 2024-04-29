@@ -5,6 +5,7 @@ extends Node
 @onready var talk_timer = $TalkTimer
 @onready var curr_story_node = $Story
 @onready var dialogue_text = $DialogueTextLabel
+@onready var screen = $Screen
 
 
 var dialogue_file = "res://Assets/kitsune_game_dialogue.json"
@@ -33,7 +34,7 @@ func _process(delta):
 
 func newCurr(path):
 	curr_story_node = get_node(path)
-	path_arr.append(curr_story_node.name)  
+				#path_arr.append(curr_story_node.name)  
 	
 	# set up dialogue stuff
 	char_index = 0
@@ -47,7 +48,10 @@ func newCurr(path):
 		# if the speaking character is not already oncreen, add them to the screen
 	if curr_story_node.speakingChar not in onscreen_char_sprites:
 		addNewCharacterSprite(curr_story_node.speakingChar)
-	
+		# goes through all the characters on screen and removes the ones that are leaving
+	for onscreen_char in onscreen_char_sprites:
+		if(onscreen_char) in curr_story_node.leavingChar:
+			removeChar(onscreen_char)
 		
 	
 	
@@ -102,5 +106,11 @@ func addNewCharacterSprite(schar):
 		onscreen_char_sprites.append(schar)
 	else:
 		onscreen_char_sprites.append(schar)
-	
-	
+	var new_char_sprite = Sprite2D.new()
+	new_char_sprite.texture = load(str("res://Sprites/", schar,".png"))
+	new_char_sprite.scale *= 0.5
+	add_child(new_char_sprite)
+	print("add new char ", schar)
+
+func removeChar(char_to_remove):
+	pass

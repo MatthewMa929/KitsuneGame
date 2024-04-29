@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cal2p0ay7hybm"
-path="res://.godot/imported/Daiko_Kusanagi.png-959997f69bbbf9318b2581f2772752b0.ctex"
+path="res://.godot/imported/Daiko Kusanagi.png-eedbc3f299fc326723820ac900d8e044.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Daiko_Kusanagi.png"
-dest_files=["res://.godot/imported/Daiko_Kusanagi.png-959997f69bbbf9318b2581f2772752b0.ctex"]
+source_file="res://Sprites/Daiko Kusanagi.png"
+dest_files=["res://.godot/imported/Daiko Kusanagi.png-eedbc3f299fc326723820ac900d8e044.ctex"]
 
 [params]
 
