@@ -8,8 +8,10 @@ var astar_grid = AStarGrid2D.new()
 var grid_size = Vector2i(18, 11)
 var torch_pos = []
 var torches = []
-var status = []
+var status = [true, true, false]
 var old_lit = []
+var walls = [Vector2i(2, 1), Vector2i(2, 0), Vector2i(0, 0)]
+var torch_cells = [Vector2i(2, 1), Vector2i(2, 0)]
 
 func _ready():
 	make_grid()
@@ -30,8 +32,6 @@ func make_grid():
 				astar_grid.set_point_solid(cell_posi, not astar_grid.is_point_solid(cell_posi))
 			if is_torch(cell_pos):
 				torches.append(direc_array(cell_pos))
-				status.append(true)
-				#print(torches)
 	for t in range(0, torches.size()):
 		torch_pos.append(torches[t][0])
 	#torch_pos = [torches[0][0], torches[1][0], torches[2][0]]
@@ -39,21 +39,21 @@ func make_grid():
 func _process(delta):
 	for i in range(torches.size()):
 		if status[i]: #Torch on
-			pass
+			curr_level.set_cell(0, torches[i][0], 0, Vector2i(2, 1))
 		else:         #Torch off
-			pass
+			curr_level.set_cell(0, torches[i][0], 0, Vector2i(2, 0))
 
 func is_wall(pos):
 	var coords = Vector2i(pos[0], pos[1])
 	var cell = curr_level.get_cell_atlas_coords(0, coords)
-	if cell == Vector2i(0, 0) or cell == Vector2i(2, 0):
+	if cell in walls:
 		return true
 	return false
 
 func is_torch(pos):
 	var coords = Vector2i(pos[0], pos[1])
 	var cell = curr_level.get_cell_atlas_coords(0, coords)
-	if cell == Vector2i(2, 0):
+	if cell in torch_cells:
 		return true
 	return false
 
