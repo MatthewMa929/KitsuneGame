@@ -24,6 +24,8 @@ func is_moveable(pos):
 		#print("Torch")
 		turn_on(coords)
 		return false
+	elif next_cell == Vector2i(2, 1):
+		return false
 	#print("Can go")
 	return true
 
