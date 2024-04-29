@@ -6,10 +6,12 @@ class_name StoryNode
 @export var type:String
 @export var jumpToNode:String
 @export var speakingChar:String
+@export var specialEffect:String
 
 func fill_node(i, dialogue_dict_entry):
 	name = str("line", i)
 	speakingChar = dialogue_dict_entry["Character name"]
 	text = dialogue_dict_entry["Dialogue"]
 	jumpToNode = str("Story/line", i+1)
+	specialEffect = dialogue_dict_entry["special effects"]
 	

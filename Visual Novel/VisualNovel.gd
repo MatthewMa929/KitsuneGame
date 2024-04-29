@@ -7,36 +7,54 @@ extends Node
 @onready var dialogue_text = $DialogueTextLabel
 
 
-var file = "res://Assets/kitsune_game_dialogue.json"
-var json_as_text = FileAccess.get_file_as_string(file)
+var dialogue_file = "res://Assets/kitsune_game_dialogue.json"
+var json_as_text = FileAccess.get_file_as_string(dialogue_file)
 var dialogue_dict = JSON.parse_string(json_as_text)
 
 var char_index = 0
 var path_arr = [0]
 var bb_num = 0
 var talking = false
+var onscreen_char_sprites = []
 
 func _ready():
-	#if dialogue_dict:
-		#print(dialogue_dict)
 	makeStoryNodes()
 	dialogue_text.text = curr_story_node.text
 	curr_story_node.jumpToNode = str("Story/line0")
+	newCurr(curr_story_node.jumpToNode)
 	
 
 func _process(delta):
 	if Input.is_action_just_pressed("Continue"):
-		newCurr(curr_story_node.jumpToNode)
+		if dialogue_text.visible_characters != dialogue_text.text.length():
+			char_index = dialogue_text.text.length()
+		else:
+			newCurr(curr_story_node.jumpToNode)
 
 func newCurr(path):
 	curr_story_node = get_node(path)
 	path_arr.append(curr_story_node.name)  
+	
+	# set up dialogue stuff
 	char_index = 0
-	text_timer.start()
 	dialogue_text.text = curr_story_node.text
-	print(curr_story_node.text)
 	dialogue_text.visible_characters = char_index
-	print(dialogue_text.visible_characters)
+		# if the line is an internal line, changes the color of the text
+	if "(" in dialogue_text.text:
+		dialogue_text.text = str("[color=#a6ccff]", dialogue_text.text, "[/color]")
+		
+	# set up visual stuff
+		# if the speaking character is not already oncreen, add them to the screen
+	if curr_story_node.speakingChar not in onscreen_char_sprites:
+		addNewCharacterSprite(curr_story_node.speakingChar)
+	
+		
+	
+	
+	
+	# do a special effect
+	
+	text_timer.start()
 	bb_num = 0
 
 
@@ -77,3 +95,12 @@ func makeStoryNodes():
 		var story_node = StoryNode.new()
 		story_node.fill_node(i, dialogue_dict[i])
 		curr_story_node.add_child(story_node)
+
+func addNewCharacterSprite(schar):
+	if "???" in schar:
+		schar = schar.substr(schar.find("("), schar.find(")"))
+		onscreen_char_sprites.append(schar)
+	else:
+		onscreen_char_sprites.append(schar)
+	
+	
