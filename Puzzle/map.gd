@@ -1,6 +1,8 @@
 extends Node2D
 #11x18
-@onready var curr_level = $TileMapB
+@onready var levelA = $TileMapA
+@onready var levelB = $TileMapB
+@onready var curr_level = levelA
 
 var cell_size = Vector2i(64, 64)
 
@@ -12,6 +14,8 @@ var status = [true, true, false]
 var old_lit = []
 var walls = [Vector2i(2, 1), Vector2i(2, 0), Vector2i(0, 0)]
 var torch_cells = [Vector2i(2, 1), Vector2i(2, 0)]
+var stages = [levelA, levelB]
+var curr_stg = false
 
 func _ready():
 	make_grid()
@@ -42,6 +46,15 @@ func _process(delta):
 			curr_level.set_cell(0, torches[i][0], 0, Vector2i(2, 1))
 		else:         #Torch off
 			curr_level.set_cell(0, torches[i][0], 0, Vector2i(2, 0))
+
+func _unhandled_input(event):
+	pass
+	#if Input.is_action_just_pressed("Next"):
+		#curr_stg = !curr_stg
+	#if curr_stg:
+		#curr_level = levelA
+	#else:
+		#curr_level = levelB
 
 func is_wall(pos):
 	var coords = Vector2i(pos[0], pos[1])
