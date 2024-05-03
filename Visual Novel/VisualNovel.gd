@@ -35,6 +35,7 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_just_pressed("Continue"):
+		# shows full message
 		if dialogue_text.visible_characters != dialogue_text.text.length():
 			char_index = dialogue_text.text.length()
 		else:
