@@ -6,6 +6,7 @@ extends Control
 @onready var talk_timer = $TalkTimer
 @onready var curr_story_node = $Story
 @onready var dialogue_text = $DialogueTextLabel
+@onready var dialogue_bg = $DialogueMeshBox
 @onready var char_name_text = $CharNameTextLabel
 @onready var char_name_bg = $CharNameMeshBox
 @onready var screen = $Screen
@@ -21,6 +22,7 @@ var char_index = 0
 var bb_num = 0
 var talking = false
 var onscreen_char_sprites = []
+var prev_speaker = ""
 
 func _ready():
 	var screen_size = get_viewport().size
@@ -49,7 +51,7 @@ func newCurr(path):
 	dialogue_text.text = curr_story_node.text
 	dialogue_text.visible_characters = char_index
 	# if the line is an internal line, changes the color of the text
-	if "(" in dialogue_text.text:
+	if dialogue_text.text != "" and dialogue_text.text[0] =="(":
 		dialogue_text.text = str("[color=#a6ccff]", dialogue_text.text, "[/color]")
 
 # set up visual stuff
@@ -60,6 +62,11 @@ func newCurr(path):
 	else:
 		char_name_bg.visible = true
 		char_name_text.text = curr_story_node.speakingChar
+	#put text box on screen
+	if curr_story_node.text == "":
+		dialogue_bg.visible = false
+	else:
+		dialogue_bg.visible = true
 
 	# if the speaking character is not already oncreen, add them to the screen
 	if curr_story_node.speakingChar not in onscreen_char_sprites:
@@ -150,11 +157,18 @@ func drawNewSprite(schar):
 	print(onscreen_char_sprites)
 
 func setSpeakingChar(speaking_char):
+	print("prev speaker: ", prev_speaker)
+	print("curr speaker: ", speaking_char)
+	if prev_speaker != "":
+		var prev = get_node(prev_speaker)
+		prev.scale /= 11/10
 	
-	if speaking_char == "":
-		return
-	var speaking = get_node(speaking_char)
-	speaking.scale *= 1.1
+	if speaking_char != "" and prev_speaker != speaking_char:
+		var speaking = get_node(speaking_char)
+		speaking.scale *= 1.1
+		prev_speaker = speaking_char
+	
+	
 
 func removeChar(char_to_remove):
 	
