@@ -13,7 +13,8 @@ class_name StoryNode
 func fill_node(i, dialogue_dict_entry):
 	if str(dialogue_dict_entry["id"]) == "lose":
 		name = str("lose_line",i-119)
-		jumpToNode = str("Story/lose_line", i+1)
+		if i - 119 < 7:
+			jumpToNode = str("Story/lose_line", i-118)
 	else:
 		name = str("line", i)
 		jumpToNode = str("Story/line", i+1)
