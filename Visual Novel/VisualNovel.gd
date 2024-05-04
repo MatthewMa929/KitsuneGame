@@ -125,6 +125,7 @@ func makeStoryNodes():
 		var story_node = StoryNode.new()
 		story_node.fill_node(i, dialogue_dict[i])
 		curr_story_node.add_child(story_node)
+		
 
 func addNewCharacterSprite(schar):
 	# is there a better way to do this? yes, but i will most likely never figure that out
@@ -161,7 +162,7 @@ func setSpeakingChar(speaking_char):
 	print("curr speaker: ", speaking_char)
 	if prev_speaker != "":
 		var prev = get_node(prev_speaker)
-		prev.scale /= 11/10
+		prev.scale /= 1.1
 	
 	if speaking_char != "" and prev_speaker != speaking_char:
 		var speaking = get_node(speaking_char)
