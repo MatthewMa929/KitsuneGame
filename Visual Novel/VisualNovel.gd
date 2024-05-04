@@ -157,18 +157,20 @@ func drawNewSprite(schar):
 	print("add new char ", schar)
 	print(onscreen_char_sprites)
 
+# Shrinks the previous speaker and grows the current speaker
 func setSpeakingChar(speaking_char):
-	print("prev speaker: ", prev_speaker)
-	print("curr speaker: ", speaking_char)
 	if prev_speaker != "":
 		var prev = get_node(prev_speaker)
+		# If there is no current speaker, grows the prev speaker
+		# so it remains the same size
+		if speaking_char == "":
+			prev.scale *= 1.1
 		prev.scale /= 1.1
-	
-	if speaking_char != "" and prev_speaker != speaking_char:
+	if speaking_char != "":
 		var speaking = get_node(speaking_char)
 		speaking.scale *= 1.1
 		prev_speaker = speaking_char
-	
+
 	
 
 func removeChar(char_to_remove):
