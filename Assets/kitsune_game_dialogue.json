@@ -1008,7 +1008,7 @@
 	"Background": ""
   },
   {
-	"id": "lose",
+	"id": "endlose",
 	"Character name": "The Great Kiko",
 	"Dialogue": "You need to keep fighting, Chiyo! The townsfolk depend on you!",
 	"Special effects": "",
@@ -1016,7 +1016,7 @@
 	"Background": ""
   },
   {
-	"id": "",
+	"id": "endlose",
 	"Character name": "Chiyo Morimiya",
 	"Dialogue": "(She's right... Get up! I need to get up!)",
 	"Special effects": "",

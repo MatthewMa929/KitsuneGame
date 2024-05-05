@@ -117,6 +117,7 @@ func _on_puzzle_lantern_moved(lantern_light):
 	old_lit = lantern_light
 
 func new_puzzle():
+	print('new_puzzle()')
 	curr_level = stages[puzzle_num]
 	status = curr_level.status
 	ori_status = status.duplicate()

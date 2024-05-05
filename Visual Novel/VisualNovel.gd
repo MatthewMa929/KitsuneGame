@@ -11,6 +11,7 @@ extends Control
 @onready var char_name_bg = $CharNameMeshBox
 @onready var screen = $Screen
 @onready var spec_effects = $SpecialEffects
+var old_story_node
 
 signal switch_to_puzzle
 
@@ -85,7 +86,6 @@ func newCurr(path):
 		loadBackground(curr_story_node.background)
 	text_timer.start()
 	bb_num = 0
-
 
 func _on_text_timer_timeout():
 	if char_index+1 < dialogue_text.text.length():

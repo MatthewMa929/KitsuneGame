@@ -48,7 +48,8 @@ func _on_player_turn_end(curr_pos):
 		lantern.visible = false
 		make_light()
 	if player.position == enemy.position && enemy.can_chase && !player.has_lantern:
-		reset_map()
+		pass
+		#reset_map()
 	start_enemy_turn()
 
 func get_path_arr(pt1, pt2):
@@ -130,10 +131,8 @@ func make_light():
 		emit_signal("lantern_moved", lantern_light)
 		#print(lantern_light)
 
-func _on_enemy_player_lost():
-	reset_map()
-
 func reset_map():
+	print('reset')
 	for i in range(map.old_lit.size()):
 		map.curr_level.set_cell(0, map.old_lit[i], 0, Vector2i(1, 0))
 	player.curr_pos = map.curr_level.player_spawn

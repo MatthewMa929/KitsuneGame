@@ -26,11 +26,11 @@ func _ready():
 	print(position)
 	
 func _physics_process(delta):
-	if player.position == position && can_chase:
+	if player.position == position && can_chase && !player.on_script:
 		emit_signal("player_lost")
 		#print("lost")
 		#get_tree().reload_current_scene()
-	if player.position == position && !can_chase:
+	if player.position == position && !can_chase && !player.on_script:
 		emit_signal("player_won")
 		#print("won")
 
@@ -75,10 +75,10 @@ func check_chase():
 func change_state(pending_state):
 	if pending_state == WAIT:
 		state = WAIT
-	if pending_state == LIGHT:
+	elif pending_state == LIGHT:
 		state = LIGHT
 		move()
-	if pending_state == CHASE:
+	elif pending_state == CHASE:
 		state = CHASE
 		move()
 

@@ -39,5 +39,4 @@ centered = false
 [connection signal="lantern_moved" from="." to="Map" method="_on_puzzle_lantern_moved"]
 [connection signal="set_up_spawns" from="Map" to="." method="_on_map_set_up_spawns"]
 [connection signal="turn_end" from="Map/Player" to="." method="_on_player_turn_end"]
-[connection signal="player_lost" from="Map/Enemy" to="." method="_on_enemy_player_lost"]
 [connection signal="turn_off" from="Map/Enemy" to="." method="_on_enemy_turn_off"]

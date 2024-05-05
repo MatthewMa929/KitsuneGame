@@ -8,7 +8,7 @@ var curr_posi = Vector2i(15.5*64, 8.5*64)
 var move_queue = [0, 0]
 var lantern_pos = curr_pos
 var has_lantern = true
-var on_script = false
+var on_script = true
 
 signal turn_end(curr_pos)
 
@@ -35,7 +35,7 @@ func _physics_process(delta):
 				move_timer.start()
 		
 		if Input.is_action_just_released("Turn"):
-			#print(curr_pos)
+			print(curr_pos)
 			can_move = true
 		
 		if Input.is_action_just_pressed("P_Lantern"):
