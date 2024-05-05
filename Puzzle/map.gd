@@ -3,6 +3,10 @@ extends Node2D
 @onready var levelA = $TileMapA
 @onready var levelB = $TileMapB
 @onready var curr_level = levelA
+@onready var status = curr_level.status
+@onready var ori_status = status.duplicate()
+@onready var lit_torch_spr = $LitTorch
+@onready var unlit_torch_spr = $UnlitTorch
 
 var cell_size = Vector2i(64, 64)
 
@@ -10,12 +14,14 @@ var astar_grid = AStarGrid2D.new()
 var grid_size = Vector2i(18, 11)
 var torch_pos = []
 var torches = []
-var status = [true, true, false]
 var old_lit = []
 var walls = [Vector2i(2, 1), Vector2i(2, 0), Vector2i(0, 0)]
 var torch_cells = [Vector2i(2, 1), Vector2i(2, 0)]
 var stages = [levelA, levelB]
 var curr_stg = false
+var puzzle_num = 0
+
+signal set_up_spawns
 
 func _ready():
 	make_grid()
@@ -36,6 +42,7 @@ func make_grid():
 				astar_grid.set_point_solid(cell_posi, not astar_grid.is_point_solid(cell_posi))
 			if is_torch(cell_pos):
 				torches.append(direc_array(cell_pos))
+				var lit_torch = lit_torch_spr.duplicate()
 	for t in range(0, torches.size()):
 		torch_pos.append(torches[t][0])
 	#torch_pos = [torches[0][0], torches[1][0], torches[2][0]]
@@ -43,9 +50,9 @@ func make_grid():
 func _process(delta):
 	for i in range(torches.size()):
 		if status[i]: #Torch on
-			curr_level.set_cell(0, torches[i][0], 0, Vector2i(2, 1))
+			pass
 		else:         #Torch off
-			curr_level.set_cell(0, torches[i][0], 0, Vector2i(2, 0))
+			pass
 
 func _unhandled_input(event):
 	pass
@@ -93,4 +100,13 @@ func _on_puzzle_lantern_moved(lantern_light):
 		curr_level.set_cell(0, old_lit[i], 0, Vector2i(1, 0))
 	for i in range(1, lantern_light.size()):
 		astar_grid.set_point_solid(lantern_light[i], true)
+	for i in range(0, lantern_light.size()):
+		curr_level.set_cell(0, lantern_light[i], 0, Vector2i(3, 0))
 	old_lit = lantern_light
+
+func new_puzzle():
+	curr_level = stages[puzzle_num]
+	status = curr_level.status
+	ori_status = status.duplicate()
+	emit_signal("set_up_spawns")
+	

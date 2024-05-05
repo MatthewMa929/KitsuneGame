@@ -12,27 +12,27 @@ enum {
 	WAIT,
 	CHASE,
 	WANDER,
-	LIGHT,
-	RUN
+	LIGHT
 }
 
 var state = WAIT
 var player_path_arr = []
 var torch_path_arr = []
 var can_chase = false
+var spawn
 
 
 func _ready():
 	print(position)
 	
 func _physics_process(delta):
-	if player.position == position && state == CHASE:
+	if player.position == position && can_chase:
 		emit_signal("player_lost")
-		print("lost")
+		#print("lost")
 		#get_tree().reload_current_scene()
-	if player.position == position && state != CHASE:
+	if player.position == position && !can_chase:
 		emit_signal("player_won")
-		print("won")
+		#print("won")
 
 func move():
 	match state:
@@ -42,6 +42,7 @@ func move():
 			elif check_light():
 				change_state(LIGHT)
 		CHASE:
+			print(player_path_arr)
 			if check_chase():
 				position = player_path_arr[1]
 			elif check_light():
@@ -49,6 +50,8 @@ func move():
 			else:
 				change_state(WAIT)
 		LIGHT:
+			if check_chase():
+				change_state(CHASE)
 			if torch_path_arr.size() > 2 and typeof(torch_path_arr[1]) != TYPE_INT:
 				#print(torch_path_arr)
 				position = torch_path_arr[1]
@@ -59,8 +62,6 @@ func move():
 				emit_signal("turn_off", coords)
 				change_state(WAIT)
 				#move()
-		RUN:
-			check_chase()
 
 func check_light():
 	if torch_path_arr.size() > 0:
@@ -68,7 +69,6 @@ func check_light():
 
 func check_chase():
 	if player_path_arr.size() < 7 && can_chase && player_path_arr.size() > 1:
-		print(player_path_arr)
 		return true
 	return false
 

@@ -14,6 +14,13 @@ signal lantern_moved(lantern_light)
 
 var lantern_light = []
 
+func _ready():
+	enemy.spawn = enemy.global_position
+	make_light()
+	lantern.position = Vector2(lantern_light[0][0]*64, lantern_light[0][1]*64)
+	lantern.visible = false
+	print(lantern_light)
+
 func is_moveable(pos):
 	var coords = Vector2i(pos[0], pos[1])
 	var next_cell = tileMap.get_cell_atlas_coords(0, coords)
@@ -40,8 +47,8 @@ func _on_player_turn_end(curr_pos):
 		player.lantern_pos = player.curr_pos
 		lantern.visible = false
 		make_light()
-		for i in range(lantern_light.size()):
-			tileMap.set_cell(0, lantern_light[i], 0, Vector2i(3, 0))
+	if player.position == enemy.position && enemy.can_chase && !player.has_lantern:
+		reset_map()
 	start_enemy_turn()
 
 func get_path_arr(pt1, pt2):
@@ -123,3 +130,24 @@ func make_light():
 		emit_signal("lantern_moved", lantern_light)
 		#print(lantern_light)
 
+func _on_enemy_player_lost():
+	reset_map()
+
+func reset_map():
+	for i in range(map.old_lit.size()):
+		map.curr_level.set_cell(0, map.old_lit[i], 0, Vector2i(1, 0))
+	player.curr_pos = map.player_spawn
+	player.position = create_posi(player.curr_pos)
+	enemy.global_position = map.enemy_spawn
+	map.status = map.ori_status.duplicate()
+	player.lantern_pos = map.player_spawn
+	player.has_lantern = true
+	lantern.position = player.position
+	lantern.visible = false
+	make_light()
+
+func _on_map_set_up_spawns():
+	reset_map()
+
+func create_posi(pos):
+	return Vector2(pos[0]*64, pos[1]*64)
