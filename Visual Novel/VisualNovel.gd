@@ -73,8 +73,9 @@ func newCurr(path):
 		if curr_story_node.speakingChar != "":
 			addNewCharacterSprite(curr_story_node.speakingChar)
 	setSpeakingChar(curr_story_node.speakingChar)
-	# goes through all the characters on screen and removes the ones that are leaving
 	removeChar(curr_story_node.leavingChar)
+	# goes through all the characters on screen and removes the ones that are leaving
+	
 
 # do a special effect
 	if curr_story_node.specialEffect == "text to puzzle":
@@ -156,12 +157,15 @@ func drawNewSprite(schar):
 
 # Shrinks the previous speaker and grows the current speaker
 func setSpeakingChar(speaking_char):
+	if "???" in speaking_char:
+		return
 	if prev_speaker != "":
 		var prev = get_node(prev_speaker)
 		# If there is no current speaker, grows the prev speaker
 		# so it remains the same size
 		if speaking_char == "":
 			prev.scale *= 1.1
+		print(str("prev: ",prev))
 		prev.scale /= 1.1
 	if speaking_char != "":
 		var speaking = get_node(speaking_char)

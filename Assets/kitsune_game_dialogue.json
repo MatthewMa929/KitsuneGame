@@ -1,938 +1,890 @@
 [
   {
-	"id": 1,
-	"Character name": "",
-	"Dialogue": "*chirp chirp chirp*",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": "House"
-  },
-  {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "Ah... It's morning.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "...",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "(This is the first time Father has left me in charge of the shrine. I'm not the best at channeling The Great Kiko, and my only talent is cleaning...)",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "... I should go to the shrine. Since the festival is soon, more and more people have been coming to get blessings from me.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "(I really hope I can live up to their expectations.)",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "blink",
-	"Leaving": "",
-	"Background": "Shrine"
-  },
-  {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "*yaawwwnnnn*",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "Today was quite tiring. It's still really hard to channel The Great Kiko…",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Yip yip! Whaddya mean by that, huh???",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "AH! Great Kiko! Pardon me, I didn't mean to offend. I merely meant-",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Oh relax, little miko. It was a joke!",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "You need to loosen up a bit. If I didn't like you, I wouldn't even respond to your prayers.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": 1,
+    "Character name": "",
+    "Dialogue": "*chirp chirp chirp*",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": "House"
+  },
+  {
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Ah... It's morning.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "...",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "(This is the first time Father has left me in charge of the shrine. I'm not the best at channeling The Great Kiko, and my only talent is cleaning...)",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "... I should go to the shrine. Since the festival is soon, more and more people have been coming to get blessings from me.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "(I really hope I can live up to their expectations.)",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "",
+    "Dialogue": "",
+    "Special effects": "blink",
+    "Leaving": "",
+    "Background": "Shrine"
+  },
+  {
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "*yaawwwnnnn*",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Today was quite tiring. It's still really hard to channel The Great Kiko…",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Yip yip! Whaddya mean by that, huh???",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "AH! Great Kiko! Pardon me, I didn't mean to offend. I merely meant-",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Oh relax, little miko. It was a joke!",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "You need to loosen up a bit. If I didn't like you, I wouldn't even respond to your prayers.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "Oh, thats-",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Oh, thats-",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "A good thing! Right? You *do* think it's a good thing, don't you?",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "A good thing! Right? You *do* think it's a good thing, don't you?",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "Um. It's a lot of responsibility, but I'll do my best.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Um. It's a lot of responsibility, but I'll do my best.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Grr. You don't sound happy about it, but I'm a gracious fox, so I'll let it slide.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Grr. You don't sound happy about it, but I'm a gracious fox, so I'll let it slide.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Anyways, don't you think it's about time you started your patrols around the mountain?",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Anyways, don't you think it's about time you started your patrols around the mountain?",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "Ah- yes, Great Kiko. I'll get going now!",
-	"Special effects": "",
-	"Leaving": "The Great Kiko",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Ah- yes, Great Kiko. I'll get going now!",
+    "Special effects": "",
+    "Leaving": "The Great Kiko",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "blink",
-	"Leaving": "",
-	"Background": "Forest"
+    "id": "",
+    "Character name": "",
+    "Dialogue": "",
+    "Special effects": "blink",
+    "Leaving": "",
+    "Background": "Forest"
   },
   {
-	"id": 2,
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "Hmm? The lanterns aren't lit…",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": 2,
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Hmm? The lanterns aren't lit…",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Yip yip! Kiko here!",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Yip yip! Kiko here!",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "AH! Oh- you scared me!",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "AH! Oh- you scared me!",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "Wait, more importantly, if the lanterns are out, then you...",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Wait, more importantly, if the lanterns are out, then you...",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "I knew I wanted you as my priest for a reason, heehee.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "I knew I wanted you as my priest for a reason, heehee.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "You're absolutely right! The longer these lanterns are out, the more my power to protect you weakens.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "You're absolutely right! The longer these lanterns are out, the more my power to protect you weakens.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Which means you need to hurry and relight them.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Which means you need to hurry and relight them.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Here, take this soul lantern. I've imbued some of my foxfire into it.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Here, take this soul lantern. I've imbued some of my foxfire into it.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Use WASD to move around to approach the unlit lanterns.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Use WASD to move around to approach the unlit lanterns.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Once you're next to an unlit lantern, use WASD again to light the lantern.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Once you're next to an unlit lantern, use WASD again to light the lantern.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "It might be dangerous, though, so if you press SPACE, you will be able to put my soul lantern down and repel any yokai looking to get you.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "It might be dangerous, though, so if you press SPACE, you will be able to put my soul lantern down and repel any yokai looking to get you.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Are you ready?",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Are you ready?",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "No, not rea-",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "No, not rea-",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Okay! Go go go!!!!",
-	"Special effects": "text to puzzle",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Okay! Go go go!!!!",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": 3,
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "Phew. We're safe now.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": "Forest"
+    "id": "",
+    "Character name": "",
+    "Dialogue": "",
+    "Special effects": "text to puzzle",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Yip yip! Good job on relighting all the lanterns. Hmmm, I probably should be a bit more worried about the fact that all of them went out at the same time, but oh well!",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": 3,
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Phew. We're safe now.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": "Forest"
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "That's a tomorrow me problem!",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Yip yip! Good job on relighting all the lanterns. Hmmm, I probably should be a bit more worried about the fact that all of them went out at the same time, but oh well!",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Well, you know how it is. I can't go past the lanterns, so I'll be seeing you later!",
-	"Special effects": "",
-	"Leaving": "The Great Kiko",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "That's a tomorrow me problem!",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "Yes, I'll- oh, she's already gone.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Well, you know how it is. I can't go past the lanterns, so I'll be seeing you later!",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "...",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Yes, I'll- oh, she's already gone.",
+    "Special effects": "",
+    "Leaving": "The Great Kiko",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "What was that sound?",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "...",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "???",
-	"Dialogue": "*groaaaannnn*",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "What was that sound?",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "H-hello? Um, are you okay?",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "???",
+    "Dialogue": "*groaaaannnn*",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "???",
-	"Dialogue": "...noooooooooo.....",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "H-hello? Um, are you okay?",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "Hold on a moment! I'll be right there!",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "???",
+    "Dialogue": "...noooooooooo.....",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "*shuffle shuffle*",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Hold on a moment! I'll be right there!",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "!!!",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "",
+    "Dialogue": "*shuffle shuffle*",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "???(Daiko Kusanagi)",
-	"Dialogue": "Help... me....",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "!!!",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "Can you walk? I'm going to bring you back to the village so we can get you taken care of, okay?",
-	"Special effects": "",
-	"Leaving": "Daiko Kusanagi",
-	"Background": ""
+    "id": "",
+    "Character name": "???(Daiko Kusanagi)",
+    "Dialogue": "Help... me....",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "fade to black",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Can you walk? I'm going to bring you back to the village so we can get you taken care of, okay?",
+    "Special effects": "",
+    "Leaving": "Daiko Kusanagi",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "(Luckily the stranger doesn't seem severely injured, just tired and bruised.)",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "",
+    "Dialogue": "",
+    "Special effects": "fade to black",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "(It's quite late right now. I'd feel bad waking the doctor up, and I think I can treat their injuries myself...)",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": "House"
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "(Luckily the stranger doesn't seem severely injured, just tired and bruised.)",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "(Back to my house it is.)",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "(It's quite late right now. I'd feel bad waking the doctor up, and I think I can treat their injuries myself...)",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": "House"
   },
   {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "*Next Morning*",
-	"Special effects": "fade from black",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "(Back to my house it is.)",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "(Hmm, if I remember correctly, The Great Kiko mentioned that the lanterns going out at the same time was a problem.)",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "",
+    "Dialogue": "*Next Morning*",
+    "Special effects": "fade from black",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "(I hope Miss Kusanagi wasn't hurt because of whatever put them out yesterday... Miss... Kusanagi?)",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "(Hmm, if I remember correctly, The Great Kiko mentioned that the lanterns going out at the same time was a problem.)",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "Oh no! I totally forgot about Miss Kusanagi!",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "(I hope Miss Kusanagi wasn't hurt because of whatever put them out yesterday... Miss... Kusanagi?)",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Daiko Kusanagi",
-	"Dialogue": "Huh? I was gonna come and say my thanks for saving me, but it looks like you already forgot about me. How sad~",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Oh no! I totally forgot about Miss Kusanagi!",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "I'm so sorry!!! Please forgive me!",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Daiko Kusanagi",
+    "Dialogue": "Huh? I was gonna come and say my thanks for saving me, but it looks like you already forgot about me. How sad~",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Daiko Kusanagi",
-	"Dialogue": "Whoa- I feel like I should be the one saying sorry, Miss Miko. I've made such a busy young lady care for someone like me.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "I'm so sorry!!! Please forgive me!",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "Busy? Ah! I'm sorry, I have to get going to the shrine now! Please feel free to explore the village while I'm gone.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Daiko Kusanagi",
+    "Dialogue": "Whoa- I feel like I should be the one saying sorry, Miss Miko. I've made such a busy young lady care for someone like me.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "blink",
-	"Leaving": "Daiko Kusanagi",
-	"Background": "Shrine"
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Busy? Ah! I'm sorry, I have to get going to the shrine now! Please feel free to explore the village while I'm gone.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Heeheehee, it's almost festival time! Can you believe that? I'm going to eat so much tofu.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "",
+    "Dialogue": "",
+    "Special effects": "blink",
+    "Leaving": "Daiko Kusanagi",
+    "Background": "Shrine"
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "Thank you for your help today, Great Kiko. I'll be heading out now.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Heeheehee, it's almost festival time! Can you believe that? I'm going to eat so much tofu.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "blink",
-	"Leaving": "The Great Kiko",
-	"Background": "Forest"
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Thank you for your help today, Great Kiko. I'll be heading out now.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "Huh???",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "",
+    "Dialogue": "",
+    "Special effects": "blink",
+    "Leaving": "The Great Kiko",
+    "Background": "Forest"
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "The lanterns are all out again?",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Huh???",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Yip yip! Hmmmm, I did say this was going to be an issue for tomorrow me, but I really don't know what's going on.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "The lanterns are all out again?",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Chiyo, because I can't go past the lanters, I'm going to need you to investigate for me, okay?",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Yip yip! Hmmmm, I did say this was going to be an issue for tomorrow me, but I really don't know what's going on.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Come back with your findings tomorrow. I'm gonna take a nap. *Yawn* Blessings tire me out. Good night!",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Chiyo, because I can't go past the lanters, I'm going to need you to investigate for me, okay?",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "I will do my- oh she's already gone… of course she is.",
-	"Special effects": "",
-	"Leaving": "The Great Kiko",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Come back with your findings tomorrow. I'm gonna take a nap. *Yawn* Blessings tire me out. Good night!",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "text to puzzle",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "I will do my- oh she's already gone… of course she is.",
+    "Special effects": "",
+    "Leaving": "The Great Kiko",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "puzzle to text",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "",
+    "Dialogue": "",
+    "Special effects": "text to puzzle",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Daiko Kusanagi",
-	"Dialogue": "That was quick.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": "Forest"
+    "id": "",
+    "Character name": "Daiko Kusanagi",
+    "Dialogue": "That was quick.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": "Forest"
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "Huh? Miss Kusanagi? What are you doing here?? Your injuries-",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Huh? Miss Kusanagi? What are you doing here?? Your injuries-",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Daiko Kusanagi",
-	"Dialogue": "Were treated by an amazing little miko last night. I felt perfectly fine this morning.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Daiko Kusanagi",
+    "Dialogue": "Were treated by an amazing little miko last night. I felt perfectly fine this morning.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Daiko Kusanagi",
-	"Dialogue": "I tried following you up the mountain so I could say thanks, but I got lost on the way ahah.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Daiko Kusanagi",
+    "Dialogue": "I tried following you up the mountain so I could say thanks, but I got lost on the way ahah.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Daiko Kusanagi",
-	"Dialogue": "I almost thought I'd be stranded in the forest for the night until you came by and fixed all the lanterns. It seems I am once again in your debt~",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Daiko Kusanagi",
+    "Dialogue": "I almost thought I'd be stranded in the forest for the night until you came by and fixed all the lanterns. It seems I am once again in your debt~",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "O-oh, yes. About the lanterns... Did you see what turned the them off? I'm worried it's a malicious yokai.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "O-oh, yes. About the lanterns... Did you see what turned the them off? I'm worried it's a malicious yokai.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Daiko Kusanagi",
-	"Dialogue": "Hm? Probably not. I think I saw a couple of kids playing around these lanterns earlier. They must've broken it somehow.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Daiko Kusanagi",
+    "Dialogue": "Hm? Probably not. I think I saw a couple of kids playing around these lanterns earlier. They must've broken it somehow.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "I see. Um, it's still quite dangerous for you to be out here without The Great Kiko's protection. Please let me take you back to the village.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "I see. Um, it's still quite dangerous for you to be out here without The Great Kiko's protection. Please let me take you back to the village.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Daiko Kusanagi",
-	"Dialogue": "My savior~",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Daiko Kusanagi",
+    "Dialogue": "My savior~",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "fade to black",
-	"Leaving": "Daiko Kusanagi",
-	"Background": ""
+    "id": "",
+    "Character name": "",
+    "Dialogue": "",
+    "Special effects": "fade to black",
+    "Leaving": "Daiko Kusanagi",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "(I brought Miss Kusanagi back to the inn, but I didn't get a chance to investigate the lanterns because I had to keep her safe.)",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "(I brought Miss Kusanagi back to the inn, but I didn't get a chance to investigate the lanterns because I had to keep her safe.)",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "(Hopefully The Great Kiko will understand.)",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": "Shrine"
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "(Hopefully The Great Kiko will understand.)",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": "Shrine"
   },
   {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "*Next Morning*",
-	"Special effects": "fade from black",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "",
+    "Dialogue": "*Next Morning*",
+    "Special effects": "fade from black",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "My humblest apologies, Great Kiko! I was unable to obtain any information regarding the lanterns last night!",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "My humblest apologies, Great Kiko! I was unable to obtain any information regarding the lanterns last night!",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Huhhh???? Why!? I mean- Ahem. Yip why?????",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Huhhh???? Why!? I mean- Ahem. Yip why?????",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "There was a young lady. Two nights ago, she got lost in the forest and injured herself while trying to find a way out.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "There was a young lady. Two nights ago, she got lost in the forest and injured herself while trying to find a way out.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "I found her near the lanterns last night after you left and got worried that she would get hurt again.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "I found her near the lanterns last night after you left and got worried that she would get hurt again.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "A human? Hurt near the lanterns? Weird, I didn't feel that at all...",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "A human? Hurt near the lanterns? Weird, I didn't feel that at all...",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Not only that, why and how was she there? The lanterns aren't anywhere close to visitors' footpaths...",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Not only that, why and how was she there? The lanterns aren't anywhere close to visitors' footpaths...",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "I'm sorry, Great Kiko. I thought that myself, but was unable to bring the question up to Miss Kusanagi.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "I'm sorry, Great Kiko. I thought that myself, but was unable to bring the question up to Miss Kusanagi.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "No more sorries, Chiyo Morimiya. You have been blessed by myself, a powerful zenko.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "No more sorries, Chiyo Morimiya. You have been blessed by myself, a powerful zenko.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Hold your head up high and do not apologize for doing your duties. You have nothing to fear.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Hold your head up high and do not apologize for doing your duties. You have nothing to fear.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "(Ah... That's right... Even though The Great Kiko likes to laze around and be praised over nothing… she's still the same holy kitsune that has protected our village for decades.)",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "(Ah... That's right... Even though The Great Kiko likes to laze around and be praised over nothing… she's still the same holy kitsune that has protected our village for decades.)",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "(You… Great Kiko, you're actually kinda cool when you want to be.)",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "(You… Great Kiko, you're actually kinda cool when you want to be.)",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Chiyo, pay close attention to what I'm abount to tell you... I have a bad feeling about this...",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "Chiyo... I have a bad feeling about this...",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
   },
   {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "(We talked for a while before I headed back down the mountain, ready to face the unknown enemy.)",
-	"Special effects": "fade to black",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "text to puzzle",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "puzzle to text",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "Oh, hello Miss Kusanagi. It's good to see you here again.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "yada yada confrontation",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "text to puzzle",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "puzzle to text",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "The Great Kiko",
-	"Dialogue": "I knew it was you.",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "(We talked for a while before I headed back down the mountain, ready to face the unknown enemy.)",
+    "Special effects": "fade to black",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "",
+    "Dialogue": "",
+    "Special effects": "text to puzzle",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "...Miss Kusanagi. It's good to see you here again.",
+    "Special effects": "",
+    "Leaving": "The Great Kiko",
+    "Background": "Forest"
+  },
+  {
+    "id": "",
+    "Character name": "Daiko Kusanagi",
+    "Dialogue": "Hehee, looks like you were expecting me. Or maybe, you like me so much that I'm always on your mind~",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Wha- No! Well- I was thinking about you...",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "Daiko Kusanagi",
+    "Dialogue": "Awww, you're so flustered. I was really just teasing you, but now I'm curious. You can't leave a lady like me waiting after saying *that*.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "It's not like you're thinking... Miss Kusanagi, yesterday you said you saw a couple of kids playing near the lanterns, yes?",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "Daiko Kusanagi",
+    "Dialogue": "Did I say that? Goodness me, I can't remember ever saying that.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "",
+    "Dialogue": "... I don't think I am, but if I was, could you say it again? What did you see that day?",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "The thing is, since the festival is coming up, most kids in the village are too busy helping with preparations.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "Chiyo Morimiya",
+    "Dialogue": "Add the fact that the lanterns are so far away from any visitor's path, and I don't actually think any children were around to put the lanterns out.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "",
+    "Dialogue": "",
+    "Special effects": "text to puzzle",
+    "Leaving": "",
+    "Background": ""
+  },
+  {
+    "id": "",
+    "Character name": "The Great Kiko",
+    "Dialogue": "I knew it was you.",
+    "Special effects": "",
+    "Leaving": "",
+    "Background": ""
+  }
 ]
