@@ -267,23 +267,7 @@
 	"id": "",
 	"Character name": "The Great Kiko",
 	"Dialogue": "Okay! Go go go!!!!",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "",
 	"Special effects": "text to puzzle",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "",
-	"Character name": "",
-	"Dialogue": "puzzle 1",
-	"Special effects": "puzzle to text",
 	"Leaving": "",
 	"Background": ""
   },
@@ -951,76 +935,4 @@
 	"Leaving": "",
 	"Background": ""
   },
-  {
-	"id": "lose",
-	"Character name": "Nogitsune",
-	"Dialogue": "Heeheehee! I win!",
-	"Special effects": "",
-	"Leaving": "all",
-	"Background": ""
-  },
-  {
-	"id": "lose",
-	"Character name": "Nogitsune",
-	"Dialogue": "Awwww, is the little miko feewing a wittle scawed?",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "lose",
-	"Character name": "Nogitsune",
-	"Dialogue": "Kahahaha!! Don't worry~~~ I won't hurt you too bad...",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "lose",
-	"Character name": "Nogitsune",
-	"Dialogue": "After all, once I take control of the shrine, I'll need you around to keep the townsfolk worshipping me~",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "lose",
-	"Character name": "",
-	"Dialogue": "*BOOM*",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "lose",
-	"Character name": "The Great Kiko",
-	"Dialogue": "Chiyo Morimiya! You can't lose here!",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "lose",
-	"Character name": "Nogitsune",
-	"Dialogue": "Urghhh.... you.... tenko....",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "endlose",
-	"Character name": "The Great Kiko",
-	"Dialogue": "You need to keep fighting, Chiyo! The townsfolk depend on you!",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  },
-  {
-	"id": "endlose",
-	"Character name": "Chiyo Morimiya",
-	"Dialogue": "(She's right... Get up! I need to get up!)",
-	"Special effects": "",
-	"Leaving": "",
-	"Background": ""
-  }
 ]

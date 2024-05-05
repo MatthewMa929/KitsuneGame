@@ -15,8 +15,10 @@ func _process(delta):
 
 func _on_enemy_player_lost():
 	print('on_enemy_player_lost')
-	visual_novel.old_story_node = visual_novel.curr_story_node
+	visual_novel.visible = false
+	puzzle.player.on_script = false
+
+func _on_enemy_player_won():
+	print('on_enemy_player_won')
 	visual_novel.visible = true
 	puzzle.player.on_script = true
-	visual_novel.curr_story_node.jumpToNode = str("Story/lose_line0")
-	visual_novel.newCurr(visual_novel.curr_story_node.jumpToNode)

@@ -48,8 +48,7 @@ func _on_player_turn_end(curr_pos):
 		lantern.visible = false
 		make_light()
 	if player.position == enemy.position && enemy.can_chase && !player.has_lantern:
-		pass
-		#reset_map()
+		reset_map()
 	start_enemy_turn()
 
 func get_path_arr(pt1, pt2):
@@ -59,7 +58,6 @@ func turn_on(pos):
 	for i in range(map.torches.size()):
 		if map.torches[i][0] == pos:
 			map.status[i] = true
-			start_enemy_turn()
 			print("On")
 
 func start_enemy_turn():
