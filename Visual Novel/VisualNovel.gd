@@ -10,6 +10,7 @@ extends Control
 @onready var char_name_text = $CharNameTextLabel
 @onready var char_name_bg = $CharNameMeshBox
 @onready var screen = $Screen
+@onready var spec_effects = $SpecialEffects
 
 signal switch_to_puzzle
 
@@ -26,9 +27,7 @@ var prev_speaker = ""
 
 func _ready():
 	var screen_size = get_viewport().size
-	var center = Vector2(screen_size.x/2, screen_size.y/2)
-	background.texture = load("res://Assets/Background_Forest.png")
-	background.position = center
+	background.position = Vector2(screen_size.x/2, screen_size.y/2)
 	makeStoryNodes()
 	dialogue_text.text = curr_story_node.text
 	curr_story_node.jumpToNode = str("Story/line0")
@@ -74,16 +73,16 @@ func newCurr(path):
 			addNewCharacterSprite(curr_story_node.speakingChar)
 	setSpeakingChar(curr_story_node.speakingChar)
 	# goes through all the characters on screen and removes the ones that are leaving
-	for onscreen_char in onscreen_char_sprites:
-		if(onscreen_char) in curr_story_node.leavingChar:
-			removeChar(onscreen_char)
+	removeChar(curr_story_node.leavingChar)
 
 # do a special effect
 	if curr_story_node.specialEffect == "text to puzzle":
 		emit_signal("switch_to_puzzle")
 	
-
+	doSpecialEffect(curr_story_node.specialEffect)
 	
+	if curr_story_node.specialEffect == "":
+		loadBackground(curr_story_node.background)
 	text_timer.start()
 	bb_num = 0
 
@@ -154,8 +153,6 @@ func drawNewSprite(schar):
 	new_char_sprite.position = Vector2(x_pos, screen_size.y - (new_char_sprite.texture.get_height()/4))
 	new_char_sprite.z_as_relative = 0
 	add_child(new_char_sprite)
-	print("add new char ", schar)
-	print(onscreen_char_sprites)
 
 # Shrinks the previous speaker and grows the current speaker
 func setSpeakingChar(speaking_char):
@@ -173,6 +170,25 @@ func setSpeakingChar(speaking_char):
 
 	
 
-func removeChar(char_to_remove):
-	
-	pass
+func removeChar(to_remove):
+	for onscreen_char in onscreen_char_sprites:
+		if onscreen_char in to_remove or to_remove == "all":
+			remove_child(get_node(onscreen_char))
+			onscreen_char_sprites.erase(onscreen_char)
+
+
+func doSpecialEffect(sfx):
+	if sfx == "blink":
+		spec_effects.play("fade in")
+		if spec_effects.animation_changed:
+			if not curr_story_node.background.is_empty():
+				loadBackground(curr_story_node.background)
+		spec_effects.play("fade out")
+	if sfx == "fade to black":
+		spec_effects.play("fade in")
+	if sfx == "fade from black":
+		spec_effects.play("fade out")
+
+func loadBackground(bg):
+	if not bg.is_empty():
+		background.texture = load(str("res://Assets/Background_",bg,".png"))

@@ -8,6 +8,7 @@ class_name StoryNode
 @export var speakingChar:String
 @export var leavingChar:String
 @export var specialEffect:String
+@export var background:String
 
 
 func fill_node(i, dialogue_dict_entry):
@@ -21,7 +22,7 @@ func fill_node(i, dialogue_dict_entry):
 	speakingChar = dialogue_dict_entry["Character name"]
 	leavingChar = dialogue_dict_entry["Leaving"]
 	text = dialogue_dict_entry["Dialogue"]
-	
 	specialEffect = dialogue_dict_entry["Special effects"]
+	background = dialogue_dict_entry["Background"]
 	
 	
