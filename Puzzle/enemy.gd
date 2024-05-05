@@ -5,8 +5,6 @@ extends CharacterBody2D
 #Will not approach directly, only trying to snuff out the torches.
 
 signal turn_off(pos)
-signal player_won
-signal player_lost
 
 enum {
 	WAIT,
@@ -26,12 +24,13 @@ func _ready():
 	print(position)
 	
 func _physics_process(delta):
-	if player.position == position && can_chase && !player.on_script:
-		emit_signal("player_lost")
+	pass
+	#if player.position == position && can_chase && !player.on_script:
+		#emit_signal("player_lost")
 		#print("lost")
 		#get_tree().reload_current_scene()
-	if player.position == position && !can_chase && !player.on_script:
-		emit_signal("player_won")
+	#if player.position == position && !can_chase && !player.on_script:
+		#emit_signal("player_won")
 		#print("won")
 
 func move():

@@ -3,8 +3,8 @@ extends CharacterBody2D
 @onready var move_timer = $MoveTimer
 
 var can_move = true  # Control variable to manage turns
-var curr_pos = [15.5, 8.5]
-var curr_posi = Vector2i(15.5*64, 8.5*64)
+var curr_pos
+var curr_posi
 var move_queue = [0, 0]
 var lantern_pos = curr_pos
 var has_lantern = true
@@ -13,8 +13,7 @@ var on_script = true
 signal turn_end(curr_pos)
 
 func _ready():
-	position = curr_posi
-	print(position)
+	pass
 
 func _physics_process(delta):
 	move_queue = [0, 0]

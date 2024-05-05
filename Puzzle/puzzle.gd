@@ -14,12 +14,28 @@ signal lantern_moved(lantern_light)
 
 var lantern_light = []
 
+signal player_won
+signal player_lost
+
 func _ready():
-	enemy.spawn = enemy.global_position
-	make_light()
-	lantern.position = Vector2(lantern_light[0][0]*64, lantern_light[0][1]*64)
-	lantern.visible = false
-	print(lantern_light)
+	pass
+	#enemy.spawn = enemy.global_position
+	#make_light()
+	#lantern.position = Vector2(lantern_light[0][0]*64, lantern_light[0][1]*64)
+	#lantern.visible = false
+	#print(lantern_light)
+
+func _process(delta):
+	check_win_lose()
+
+func check_win_lose():
+	if player.position == enemy.position && enemy.can_chase && !player.on_script:
+		emit_signal("player_lost")
+		print("lost")
+		#get_tree().reload_current_scene()
+	if player.position == enemy.position && !enemy.can_chase && !player.on_script:
+		emit_signal("player_won")
+		print("won")
 
 func is_moveable(pos):
 	var coords = Vector2i(pos[0], pos[1])
@@ -47,8 +63,7 @@ func _on_player_turn_end(curr_pos):
 		player.lantern_pos = player.curr_pos
 		lantern.visible = false
 		make_light()
-	if player.position == enemy.position && enemy.can_chase && !player.has_lantern:
-		reset_map()
+	check_win_lose()
 	start_enemy_turn()
 
 func get_path_arr(pt1, pt2):
@@ -148,3 +163,6 @@ func _on_map_set_up_spawns():
 
 func create_posi(pos):
 	return Vector2(pos[0]*64, pos[1]*64)
+
+func _on_enemy_player_lost():
+	reset_map()

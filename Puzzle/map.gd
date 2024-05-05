@@ -2,11 +2,13 @@ extends Node2D
 #11x18
 @onready var levelA = $TileMapA
 @onready var levelB = $TileMapB
-@onready var curr_level = levelA
+@onready var levelC = $TileMapC
+@onready var curr_level = levelC
 @onready var status = curr_level.status
 @onready var ori_status = status.duplicate()
 @onready var lit_torch_spr = $LitTorch
 @onready var unlit_torch_spr = $UnlitTorch
+@onready var stages = [levelC, levelA, levelB]
 
 var cell_size = Vector2i(64, 64)
 
@@ -19,14 +21,13 @@ var walls = [Vector2i(2, 1), Vector2i(2, 0), Vector2i(0, 0), Vector2i(0, 1)]
 var torch_cells = [Vector2i(2, 1), Vector2i(2, 0)]
 var lit_torch_sprs = []
 var unlit_torch_sprs = []
-var stages = [levelA, levelB]
 var curr_stg = false
 var puzzle_num = 0
 
 signal set_up_spawns
 
 func _ready():
-	make_grid()
+	pass
 
 func make_grid():
 	grid_size = Vector2i(get_viewport_rect().size) / cell_size
@@ -121,5 +122,7 @@ func new_puzzle():
 	curr_level = stages[puzzle_num]
 	status = curr_level.status
 	ori_status = status.duplicate()
+	make_grid()
+	puzzle_num += 1
 	emit_signal("set_up_spawns")
 	

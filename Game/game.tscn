@@ -11,8 +11,8 @@ script = ExtResource("1_cbou0")
 
 [node name="VisualNovel" parent="." instance=ExtResource("3_wrl3p")]
 
-[connection signal="player_lost" from="Puzzle/Map/Enemy" to="." method="_on_enemy_player_lost"]
-[connection signal="player_won" from="Puzzle/Map/Enemy" to="." method="_on_enemy_player_won"]
+[connection signal="player_lost" from="Puzzle" to="." method="_on_puzzle_player_lost"]
+[connection signal="player_won" from="Puzzle" to="." method="_on_puzzle_player_won"]
 [connection signal="switch_to_puzzle" from="VisualNovel" to="." method="_on_visual_novel_switch_to_puzzle"]
 
 [editable path="Puzzle"]
