@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://bogsicd0wq65d"]
+[gd_scene load_steps=8 format=3 uid="uid://bogsicd0wq65d"]
 
 [ext_resource type="Script" path="res://Puzzle/puzzle.gd" id="1_8yify"]
 [ext_resource type="PackedScene" uid="uid://cxsbaxpwnjeps" path="res://Puzzle/player.tscn" id="2_h37na"]
 [ext_resource type="PackedScene" uid="uid://hejmofcy2rke" path="res://Puzzle/map.tscn" id="2_jwj7f"]
 [ext_resource type="PackedScene" uid="uid://bo841e3p4cqgp" path="res://Puzzle/enemy.tscn" id="4_rc3d2"]
 [ext_resource type="Texture2D" uid="uid://p4w8l4g5xpaj" path="res://Sprites/lantern.png" id="5_27f7d"]
+[ext_resource type="Texture2D" path="res://Sprites/torch_lit.png" id="6_reg2c"]
+[ext_resource type="Texture2D" path="res://Sprites/torch_unlit.png" id="7_8mmdv"]
 
 [node name="Puzzle" type="Node2D"]
 script = ExtResource("1_8yify")
@@ -21,7 +23,16 @@ position = Vector2(288, 480)
 texture = ExtResource("5_27f7d")
 centered = false
 
+[node name="LitTorch" type="Sprite2D" parent="Map"]
+position = Vector2(735, 224)
+texture = ExtResource("6_reg2c")
+
+[node name="UnlitTorch" type="Sprite2D" parent="Map"]
+position = Vector2(480, 225)
+texture = ExtResource("7_8mmdv")
+
 [connection signal="enemy_turn" from="." to="Map/Enemy" method="_on_puzzle_enemy_turn"]
 [connection signal="lantern_moved" from="." to="Map" method="_on_puzzle_lantern_moved"]
 [connection signal="turn_end" from="Map/Player" to="." method="_on_player_turn_end"]
+[connection signal="player_lost" from="Map/Enemy" to="." method="_on_enemy_player_lost"]
 [connection signal="turn_off" from="Map/Enemy" to="." method="_on_enemy_turn_off"]

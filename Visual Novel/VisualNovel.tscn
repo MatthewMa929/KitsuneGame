@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://daxgl3tsgkhse"]
+[gd_scene load_steps=8 format=3 uid="uid://daxgl3tsgkhse"]
 
 [ext_resource type="Script" path="res://Visual Novel/VisualNovel.gd" id="1_6h3i0"]
 [ext_resource type="PackedScene" uid="uid://hds0vnbgahmg" path="res://Visual Novel/story.tscn" id="2_2uc5t"]
@@ -15,42 +15,6 @@ default_font_size = 32
 [sub_resource type="Theme" id="Theme_recq7"]
 default_font = ExtResource("3_mk78b")
 default_font_size = 40
-
-[sub_resource type="Animation" id="Animation_lxt01"]
-resource_name = "fade in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpecialEffects/ColorRect:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_qfls6"]
-resource_name = "fade out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpecialEffects/ColorRect:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_y7ykp"]
-_data = {
-"fade in": SubResource("Animation_lxt01"),
-"fade out": SubResource("Animation_qfls6")
-}
 
 [node name="VisualNovel" type="Control"]
 layout_mode = 3
@@ -126,17 +90,6 @@ offset_right = 375.0
 offset_bottom = 458.0
 theme = SubResource("Theme_recq7")
 text = "Daiko Kusanagi"
-
-[node name="SpecialEffects" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_y7ykp")
-}
-
-[node name="ColorRect" type="ColorRect" parent="SpecialEffects"]
-self_modulate = Color(1, 1, 1, 0)
-offset_right = 1163.0
-offset_bottom = 653.0
-color = Color(0, 0, 0, 1)
 
 [connection signal="timeout" from="TextTimer" to="." method="_on_text_timer_timeout"]
 [connection signal="timeout" from="DotTimer" to="." method="_on_dot_timer_timeout"]
