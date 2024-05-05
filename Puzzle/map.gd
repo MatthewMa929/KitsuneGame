@@ -15,8 +15,10 @@ var grid_size = Vector2i(18, 11)
 var torch_pos = []
 var torches = []
 var old_lit = []
-var walls = [Vector2i(2, 1), Vector2i(2, 0), Vector2i(0, 0)]
+var walls = [Vector2i(2, 1), Vector2i(2, 0), Vector2i(0, 0), Vector2i(0, 1)]
 var torch_cells = [Vector2i(2, 1), Vector2i(2, 0)]
+var lit_torch_sprs = []
+var unlit_torch_sprs = []
 var stages = [levelA, levelB]
 var curr_stg = false
 var puzzle_num = 0
@@ -43,6 +45,14 @@ func make_grid():
 			if is_torch(cell_pos):
 				torches.append(direc_array(cell_pos))
 				var lit_torch = lit_torch_spr.duplicate()
+				var unlit_torch = unlit_torch_spr.duplicate()
+				add_child(lit_torch)
+				add_child(unlit_torch)
+				lit_torch.position = Vector2(cell_pos[0]*64, cell_pos[1]*64)
+				lit_torch_sprs.append(lit_torch)
+				unlit_torch.position = Vector2(cell_pos[0]*64, cell_pos[1]*64)
+				unlit_torch_sprs.append(unlit_torch)
+				print(lit_torch_sprs)
 	for t in range(0, torches.size()):
 		torch_pos.append(torches[t][0])
 	#torch_pos = [torches[0][0], torches[1][0], torches[2][0]]
@@ -50,9 +60,11 @@ func make_grid():
 func _process(delta):
 	for i in range(torches.size()):
 		if status[i]: #Torch on
-			pass
+			unlit_torch_sprs[i].visible = false
+			lit_torch_sprs[i].visible = true
 		else:         #Torch off
-			pass
+			unlit_torch_sprs[i].visible = true
+			lit_torch_sprs[i].visible = false
 
 func _unhandled_input(event):
 	pass

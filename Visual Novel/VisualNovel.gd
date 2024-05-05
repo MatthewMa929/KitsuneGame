@@ -79,7 +79,7 @@ func newCurr(path):
 	if curr_story_node.specialEffect == "text to puzzle":
 		emit_signal("switch_to_puzzle")
 	
-	doSpecialEffect(curr_story_node.specialEffect)
+	#doSpecialEffect(curr_story_node.specialEffect)
 	
 	if curr_story_node.specialEffect == "":
 		loadBackground(curr_story_node.background)

@@ -24,8 +24,8 @@ func _ready():
 func is_moveable(pos):
 	var coords = Vector2i(pos[0], pos[1])
 	var next_cell = tileMap.get_cell_atlas_coords(0, coords)
-	if next_cell == Vector2i(0, 0): #Wall
-		#print("No go")
+	if next_cell == Vector2i(0, 0) or next_cell == Vector2i(0, 1): #Wall
+		print("No go")
 		return false
 	elif next_cell == Vector2i(2, 0): #Torch
 		#print("Torch")
@@ -136,11 +136,11 @@ func _on_enemy_player_lost():
 func reset_map():
 	for i in range(map.old_lit.size()):
 		map.curr_level.set_cell(0, map.old_lit[i], 0, Vector2i(1, 0))
-	player.curr_pos = map.player_spawn
+	player.curr_pos = map.curr_level.player_spawn
 	player.position = create_posi(player.curr_pos)
-	enemy.global_position = map.enemy_spawn
+	enemy.global_position = map.curr_level.enemy_spawn
 	map.status = map.ori_status.duplicate()
-	player.lantern_pos = map.player_spawn
+	player.lantern_pos = map.curr_level.player_spawn
 	player.has_lantern = true
 	lantern.position = player.position
 	lantern.visible = false

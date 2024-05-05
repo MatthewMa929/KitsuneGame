@@ -24,12 +24,16 @@ texture = ExtResource("5_27f7d")
 centered = false
 
 [node name="LitTorch" type="Sprite2D" parent="Map"]
+visible = false
 position = Vector2(735, 224)
 texture = ExtResource("6_reg2c")
+centered = false
 
 [node name="UnlitTorch" type="Sprite2D" parent="Map"]
+visible = false
 position = Vector2(480, 225)
 texture = ExtResource("7_8mmdv")
+centered = false
 
 [connection signal="enemy_turn" from="." to="Map/Enemy" method="_on_puzzle_enemy_turn"]
 [connection signal="lantern_moved" from="." to="Map" method="_on_puzzle_lantern_moved"]

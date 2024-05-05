@@ -8,7 +8,7 @@ var curr_posi = Vector2i(15.5*64, 8.5*64)
 var move_queue = [0, 0]
 var lantern_pos = curr_pos
 var has_lantern = true
-var on_script = true
+var on_script = false
 
 signal turn_end(curr_pos)
 
