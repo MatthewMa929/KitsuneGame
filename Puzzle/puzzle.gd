@@ -39,7 +39,7 @@ func check_win_lose():
 		emit_signal("player_lost")
 		print("lost")
 		#get_tree().reload_current_scene()
-	if player.position == enemy.position && !enemy.can_chase && !player.on_script:
+	if player.position == enemy.position && !enemy.can_chase && !player.on_script && player.has_lantern:
 		emit_signal("player_won")
 		print("won")
 	if map.status == [true, true, true] && !player.on_script:
@@ -156,6 +156,7 @@ func reset_map():
 	print('reset')
 	for i in range(map.old_lit.size()):
 		map.curr_level.set_cell(0, map.old_lit[i], 0, Vector2i(1, 0))
+	enemy.position = map.curr_level.enemy_spawn
 	player.curr_pos = map.curr_level.player_spawn
 	player.position = create_posi(player.curr_pos)
 	map.ori_status = tileMap.status

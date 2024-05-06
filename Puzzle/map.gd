@@ -157,7 +157,7 @@ func new_puzzle():
 		unlit_torch_sprs[i].queue_free()
 	curr_level = stages[puzzle_num]
 	puzzle.tileMap = curr_level
-	enemy.global_position = curr_level.enemy_spawn
+	enemy.position = curr_level.enemy_spawn
 	curr_level.visible = true
 	status = curr_level.status
 	ori_status = status.duplicate(true)
