@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bogsicd0wq65d"]
+[gd_scene load_steps=10 format=3 uid="uid://bogsicd0wq65d"]
 
 [ext_resource type="Script" path="res://Puzzle/puzzle.gd" id="1_8yify"]
 [ext_resource type="PackedScene" uid="uid://cxsbaxpwnjeps" path="res://Puzzle/player.tscn" id="2_h37na"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://p4w8l4g5xpaj" path="res://Sprites/lantern.png" id="5_27f7d"]
 [ext_resource type="Texture2D" uid="uid://t8rmem22y1f4" path="res://Sprites/torch_lit.png" id="6_reg2c"]
 [ext_resource type="Texture2D" uid="uid://c435jsaa0pmya" path="res://Sprites/torch_unlit.png" id="7_8mmdv"]
+[ext_resource type="AudioStream" uid="uid://r6llwru62ha6" path="res://Audio/better_crickets.mp3" id="8_abju1"]
+[ext_resource type="AudioStream" uid="uid://bxg84onfbn1ln" path="res://Audio/light_fire.wav" id="9_1cxg1"]
 
 [node name="Puzzle" type="Node2D"]
 script = ExtResource("1_8yify")
@@ -34,6 +36,12 @@ visible = false
 position = Vector2(480, 225)
 texture = ExtResource("7_8mmdv")
 centered = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_abju1")
+
+[node name="LightFire" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_1cxg1")
 
 [connection signal="enemy_turn" from="." to="Map/Enemy" method="_on_puzzle_enemy_turn"]
 [connection signal="lantern_moved" from="." to="Map" method="_on_puzzle_lantern_moved"]

@@ -11,6 +11,7 @@ signal lantern_moved(lantern_light)
 @onready var enemy = $Map/Enemy
 @onready var lantern = $Map/Lantern
 @onready var collidable = []
+@onready var light_fire = $LightFire
 
 var lantern_light = []
 
@@ -26,14 +27,19 @@ func _ready():
 	#print(lantern_light)
 
 func _process(delta):
+	enemy.can_chase = check_lit()
 	check_win_lose()
+	if check_lit():
+		map.make_grid_dark()
+	else:
+		map.make_grid_light()
 
 func check_win_lose():
 	if player.position == enemy.position && enemy.can_chase && !player.on_script:
 		emit_signal("player_lost")
 		print("lost")
 		#get_tree().reload_current_scene()
-	if player.position == enemy.position && !enemy.can_chase && !player.on_script:
+	if player.position == enemy.position && !enemy.can_chase && !player.on_script && player.has_lantern:
 		emit_signal("player_won")
 		print("won")
 	if map.status == [true, true, true] && !player.on_script:
@@ -46,13 +52,12 @@ func is_moveable(pos):
 	if next_cell == Vector2i(0, 0) or next_cell == Vector2i(0, 1): #Wall
 		print("No go")
 		return false
-	elif next_cell == Vector2i(2, 0): #Torch
-		#print("Torch")
+	elif next_cell in map.torch_cells: #Torch
+		print("Torch")
 		turn_on(coords)
 		return false
 	elif next_cell == Vector2i(2, 1):
 		return false
-	#print("Can go")
 	return true
 
 func _on_player_turn_end(curr_pos):
@@ -76,11 +81,11 @@ func turn_on(pos):
 	for i in range(map.torches.size()):
 		if map.torches[i][0] == pos:
 			map.status[i] = true
+			light_fire.play()
 			print("On")
 
 func start_enemy_turn():
 	update_collidable()
-	enemy.can_chase = check_lit()
 	enemy.player_path_arr = get_path_arr(enemy.global_position, player.global_position)
 	get_torch_path()
 	emit_signal("enemy_turn")
@@ -151,6 +156,7 @@ func reset_map():
 	print('reset')
 	for i in range(map.old_lit.size()):
 		map.curr_level.set_cell(0, map.old_lit[i], 0, Vector2i(1, 0))
+	enemy.position = map.curr_level.enemy_spawn
 	player.curr_pos = map.curr_level.player_spawn
 	player.position = create_posi(player.curr_pos)
 	map.ori_status = tileMap.status

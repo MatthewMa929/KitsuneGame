@@ -12,6 +12,7 @@ extends Node2D
 @onready var lit_torch_spr = $LitTorch
 @onready var unlit_torch_spr = $UnlitTorch
 @onready var stages = [levelCT, levelC, levelA, levelB]
+@onready var background = $"../AudioStreamPlayer"
 
 var cell_size = Vector2i(64, 64)
 
@@ -33,6 +34,7 @@ func _ready():
 	pass
 
 func make_grid():
+	background.play()
 	astar_grid.clear()
 	grid_size = Vector2i(get_viewport_rect().size) / cell_size
 	astar_grid.size = grid_size
@@ -62,6 +64,27 @@ func make_grid():
 		torch_pos.append(torches[t][0])
 	#torch_pos = [torches[0][0], torches[1][0], torches[2][0]]
 	#astar_grid.update()
+func make_grid_dark():
+	for x in range(0, grid_size[0]):
+		for y in range(0, grid_size[1]):
+			var cell_pos = [x, y]
+			var cell_posi = Vector2i(x, y)
+			var cell = curr_level.get_cell_atlas_coords(0, cell_posi)
+			if cell == Vector2i(1, 0):
+				curr_level.set_cell(0, cell_posi, 0, Vector2i(1, 1))
+			if cell == Vector2i(2, 0):
+				curr_level.set_cell(0, cell_posi, 0, Vector2i(2, 1))
+
+func make_grid_light():
+	for x in range(0, grid_size[0]):
+		for y in range(0, grid_size[1]):
+			var cell_pos = [x, y]
+			var cell_posi = Vector2i(x, y)
+			var cell = curr_level.get_cell_atlas_coords(0, cell_posi)
+			if cell == Vector2i(1, 1):
+				curr_level.set_cell(0, cell_posi, 0, Vector2i(1, 0))
+			if cell == Vector2i(2, 1):
+				curr_level.set_cell(0, cell_posi, 0, Vector2i(2, 0))
 
 func _process(delta):
 	for i in range(torches.size()):
@@ -134,7 +157,7 @@ func new_puzzle():
 		unlit_torch_sprs[i].queue_free()
 	curr_level = stages[puzzle_num]
 	puzzle.tileMap = curr_level
-	enemy.global_position = curr_level.enemy_spawn
+	enemy.position = curr_level.enemy_spawn
 	curr_level.visible = true
 	status = curr_level.status
 	ori_status = status.duplicate(true)
