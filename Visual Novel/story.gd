@@ -21,5 +21,6 @@ func fill_node(i, dialogue_dict_entry):
 	text = dialogue_dict_entry["Dialogue"]
 	specialEffect = dialogue_dict_entry["Special effects"]
 	background = dialogue_dict_entry["Background"]
-	
+	if str(dialogue_dict_entry["id"]) == "end":
+		jumpToNode = str("Story/End_node")
 	
