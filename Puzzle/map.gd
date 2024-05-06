@@ -12,6 +12,7 @@ extends Node2D
 @onready var lit_torch_spr = $LitTorch
 @onready var unlit_torch_spr = $UnlitTorch
 @onready var stages = [levelCT, levelC, levelA, levelB]
+@onready var background = $"../AudioStreamPlayer"
 
 var cell_size = Vector2i(64, 64)
 
@@ -33,6 +34,7 @@ func _ready():
 	pass
 
 func make_grid():
+	background.play()
 	astar_grid.clear()
 	grid_size = Vector2i(get_viewport_rect().size) / cell_size
 	astar_grid.size = grid_size
