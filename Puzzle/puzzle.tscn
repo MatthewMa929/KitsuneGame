@@ -38,7 +38,7 @@ centered = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_2laeb")
-volume_db = -3.0
+volume_db = -5.0
 
 [connection signal="enemy_turn" from="." to="Map/Enemy" method="_on_puzzle_enemy_turn"]
 [connection signal="lantern_moved" from="." to="Map" method="_on_puzzle_lantern_moved"]
