@@ -205,3 +205,4 @@ func doSpecialEffect(sfx):
 func loadBackground(bg):
 	if not bg.is_empty():
 		background.texture = load(str("res://Assets/Background_",bg,".png"))
+		

@@ -17,3 +17,7 @@ jumpToNode = "Story/StoryNode"
 [node name="StoryNode" type="Node" parent="."]
 script = ExtResource("1_umvkh")
 text = "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
+
+[node name="End_node" type="Node" parent="."]
+script = ExtResource("1_umvkh")
+background = "Thanks"
