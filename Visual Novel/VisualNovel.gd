@@ -155,7 +155,7 @@ func drawNewSprite(schar):
 	elif onscreen_char_sprites.size() == 2:
 		x_pos = screen_size.x /5*4-50
 	new_char_sprite.position = Vector2(x_pos, screen_size.y - (new_char_sprite.texture.get_height()/4))
-	new_char_sprite.z_as_relative = 0
+	new_char_sprite.z_as_relative = 1
 	add_child(new_char_sprite)
 
 # Shrinks the previous speaker and grows the current speaker
