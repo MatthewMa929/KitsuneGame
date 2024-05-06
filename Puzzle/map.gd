@@ -3,9 +3,11 @@ extends Node2D
 @onready var levelA = $TileMapA
 @onready var levelB = $TileMapB
 @onready var levelC = $TileMapC
+@onready var puzzle = $".."
+@onready var enemy = $Enemy
 @onready var curr_level = levelC
 @onready var status = curr_level.status
-@onready var ori_status = status.duplicate()
+@onready var ori_status = status.duplicate(true)
 @onready var lit_torch_spr = $LitTorch
 @onready var unlit_torch_spr = $UnlitTorch
 @onready var stages = [levelC, levelA, levelB]
@@ -30,6 +32,7 @@ func _ready():
 	pass
 
 func make_grid():
+	astar_grid.clear()
 	grid_size = Vector2i(get_viewport_rect().size) / cell_size
 	astar_grid.size = grid_size
 	astar_grid.cell_size = cell_size
@@ -42,11 +45,11 @@ func make_grid():
 			var cell_pos = [x, y]
 			var cell_posi = Vector2i(x, y)
 			if is_wall(cell_pos):
-				astar_grid.set_point_solid(cell_posi, not astar_grid.is_point_solid(cell_posi))
+				astar_grid.set_point_solid(cell_posi, true)
 			if is_torch(cell_pos):
 				torches.append(direc_array(cell_pos))
-				var lit_torch = lit_torch_spr.duplicate()
-				var unlit_torch = unlit_torch_spr.duplicate()
+				var lit_torch = lit_torch_spr.duplicate(true)
+				var unlit_torch = unlit_torch_spr.duplicate(true)
 				add_child(lit_torch)
 				add_child(unlit_torch)
 				lit_torch.position = Vector2(cell_pos[0]*64, cell_pos[1]*64)
@@ -56,7 +59,9 @@ func make_grid():
 				print(lit_torch_sprs)
 	for t in range(0, torches.size()):
 		torch_pos.append(torches[t][0])
+	print(torches)
 	#torch_pos = [torches[0][0], torches[1][0], torches[2][0]]
+	#astar_grid.update()
 
 func _process(delta):
 	for i in range(torches.size()):
@@ -119,9 +124,26 @@ func _on_puzzle_lantern_moved(lantern_light):
 
 func new_puzzle():
 	print('new_puzzle()')
+	enemy.reset()
+	print(curr_level)
+	puzzle.lantern_light = []
+	torch_pos = []
+	_on_puzzle_lantern_moved(puzzle.lantern_light)
+	for stage in stages:
+		stage.visible = false
+	for i in range(lit_torch_sprs.size()):
+		lit_torch_sprs[i].queue_free()
+		unlit_torch_sprs[i].queue_free()
 	curr_level = stages[puzzle_num]
+	puzzle.tileMap = curr_level
+	enemy.global_position = curr_level.enemy_spawn
+	curr_level.visible = true
 	status = curr_level.status
-	ori_status = status.duplicate()
+	ori_status = status.duplicate(true)
+	puzzle.collidable = []
+	torches = []
+	lit_torch_sprs = []
+	unlit_torch_sprs = []
 	make_grid()
 	puzzle_num += 1
 	emit_signal("set_up_spawns")

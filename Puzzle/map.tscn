@@ -40,7 +40,7 @@ layer_0/tile_data = PackedInt32Array(655366, 0, 1, 655367, 0, 1, 655368, 0, 0, 6
 script = ExtResource("3_av2qs")
 player_spawn = Array[float]([15.5, 8.5])
 enemy_spawn = Vector2(288, 480)
-status = Array[bool]([true, true, true])
+status = Array[bool]([true, false, true])
 
 [node name="TileMapC" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_n8dxc")

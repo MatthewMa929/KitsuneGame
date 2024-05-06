@@ -34,6 +34,7 @@ func _physics_process(delta):
 		#print("won")
 
 func move():
+	print(state)
 	match state:
 		WAIT:
 			if check_chase():
@@ -52,12 +53,12 @@ func move():
 			if check_chase():
 				change_state(CHASE)
 			if torch_path_arr.size() > 2 and typeof(torch_path_arr[1]) != TYPE_INT:
-				#print(torch_path_arr)
 				position = torch_path_arr[1]
 			elif typeof(torch_path_arr[1]) == TYPE_INT:
 				change_state(WAIT)
 			else: #Turn the torch off
 				var coords = Vector2i(torch_path_arr[1][0], torch_path_arr[1][1])
+				#print(torch_path_arr)
 				emit_signal("turn_off", coords)
 				change_state(WAIT)
 				#move()
@@ -83,3 +84,9 @@ func change_state(pending_state):
 
 func _on_puzzle_enemy_turn():
 	move()
+
+func reset():
+	state = WAIT
+	player_path_arr = []
+	torch_path_arr = []
+	can_chase = false

@@ -78,12 +78,13 @@ func turn_on(pos):
 func start_enemy_turn():
 	update_collidable()
 	enemy.can_chase = check_lit()
-	enemy.player_path_arr = get_path_arr(enemy.position, player.position)
+	enemy.player_path_arr = get_path_arr(enemy.global_position, player.global_position)
 	get_torch_path()
 	emit_signal("enemy_turn")
 
 func _on_enemy_turn_off(pos):
 	for i in range(map.torches.size()):
+		#print(map.torches, pos)
 		if map.torches[i][0] == pos:
 			map.status[i] = false
 			print("Off")
@@ -124,7 +125,6 @@ func get_torch_path():
 		if closest.size() - 1 > closest_arr[k][1].size() && map.status[k]:
 			closest = closest_arr[k][1]
 			closest.append(map.torch_pos[k])
-			#print(closest)
 	enemy.torch_path_arr = closest
 
 func update_collidable():
@@ -150,8 +150,9 @@ func reset_map():
 		map.curr_level.set_cell(0, map.old_lit[i], 0, Vector2i(1, 0))
 	player.curr_pos = map.curr_level.player_spawn
 	player.position = create_posi(player.curr_pos)
-	enemy.global_position = map.curr_level.enemy_spawn
-	map.status = map.ori_status.duplicate()
+	map.ori_status = tileMap.status
+	map.status = map.ori_status.duplicate(true)
+	print(map.status)
 	player.lantern_pos = map.curr_level.player_spawn
 	player.has_lantern = true
 	lantern.position = player.position
