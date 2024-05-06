@@ -11,6 +11,7 @@ signal lantern_moved(lantern_light)
 @onready var enemy = $Map/Enemy
 @onready var lantern = $Map/Lantern
 @onready var collidable = []
+@onready var light_fire = $LightFire
 
 var lantern_light = []
 
@@ -26,6 +27,7 @@ func _ready():
 	#print(lantern_light)
 
 func _process(delta):
+	enemy.can_chase = check_lit()
 	check_win_lose()
 	if check_lit():
 		map.make_grid_dark()
@@ -79,11 +81,11 @@ func turn_on(pos):
 	for i in range(map.torches.size()):
 		if map.torches[i][0] == pos:
 			map.status[i] = true
+			light_fire.play()
 			print("On")
 
 func start_enemy_turn():
 	update_collidable()
-	enemy.can_chase = check_lit()
 	enemy.player_path_arr = get_path_arr(enemy.global_position, player.global_position)
 	get_torch_path()
 	emit_signal("enemy_turn")

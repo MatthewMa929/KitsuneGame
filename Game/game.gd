@@ -5,6 +5,7 @@ extends Node
 @onready var morning = $Morning
 @onready var breeze = $Breeze
 @onready var background = morning
+@onready var puzzle_background = puzzle.map.background
 
 func _ready():
 	background.play()
@@ -36,3 +37,4 @@ func _on_puzzle_player_won():
 	puzzle.map.background.stop()
 	background = breeze
 	background.play()
+	puzzle_background.play()

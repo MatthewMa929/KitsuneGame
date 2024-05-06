@@ -19,7 +19,7 @@ volume_db = 4.0
 
 [node name="Breeze" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_jhl3i")
-volume_db = 6.0
+volume_db = 8.0
 
 [connection signal="player_lost" from="Puzzle" to="." method="_on_puzzle_player_lost"]
 [connection signal="player_won" from="Puzzle" to="." method="_on_puzzle_player_won"]
