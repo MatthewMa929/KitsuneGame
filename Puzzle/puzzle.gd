@@ -39,10 +39,13 @@ func check_win_lose():
 		emit_signal("player_lost")
 		print("lost")
 		#get_tree().reload_current_scene()
-	if player.position == enemy.position && !enemy.can_chase && !player.on_script && player.has_lantern:
-		emit_signal("player_won")
+	if player.position == enemy.position && !enemy.can_chase && !player.on_script:
+		if player.has_lantern:
+			emit_signal("player_won")
+		elif map.status == [true, true, true]:
+			emit_signal("player_won")
 		print("won")
-	if map.status == [true, true, true] && !player.on_script:
+	if map.status == [true, true, true] && map.curr_level == map.levelCT && !player.on_script:
 		emit_signal("player_won")
 		print("won_torches")
 
