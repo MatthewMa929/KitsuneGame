@@ -25,4 +25,5 @@ func _on_puzzle_player_lost():
 func _on_puzzle_player_won():
 	print('on_enemy_player_won')
 	visual_novel.visible = true
+	visual_novel.color_rect.visible = true
 	puzzle.player.on_script = true

@@ -11,6 +11,7 @@ extends Control
 @onready var char_name_bg = $CharNameMeshBox
 @onready var screen = $Screen
 @onready var spec_effects = $SpecialEffects
+@onready var color_rect = $SpecialEffects/ColorRect
 var old_story_node
 
 signal switch_to_puzzle
@@ -79,9 +80,11 @@ func newCurr(path):
 
 # do a special effect
 	if curr_story_node.specialEffect == "text to puzzle":
+		color_rect.visible = false
 		emit_signal("switch_to_puzzle")
-	
-	#doSpecialEffect(curr_story_node.specialEffect)
+		
+	else:
+		doSpecialEffect(curr_story_node.specialEffect)
 	
 	if curr_story_node.specialEffect == "":
 		loadBackground(curr_story_node.background)
@@ -161,6 +164,8 @@ func setSpeakingChar(speaking_char):
 		return
 	if prev_speaker != "":
 		var prev = get_node(prev_speaker)
+		if !prev:
+			return
 		# If there is no current speaker, grows the prev speaker
 		# so it remains the same size
 		if speaking_char == "":
@@ -190,8 +195,12 @@ func doSpecialEffect(sfx):
 		spec_effects.play("fade out")
 	if sfx == "fade to black":
 		spec_effects.play("fade in")
+		if not curr_story_node.background.is_empty():
+				loadBackground(curr_story_node.background)
 	if sfx == "fade from black":
 		spec_effects.play("fade out")
+		if not curr_story_node.background.is_empty():
+				loadBackground(curr_story_node.background)
 
 func loadBackground(bg):
 	if not bg.is_empty():

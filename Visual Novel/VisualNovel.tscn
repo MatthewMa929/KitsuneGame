@@ -113,17 +113,17 @@ text = "(Good morning, Great Kiko)
 [node name="CharNameMeshBox" type="MeshInstance2D" parent="."]
 modulate = Color(0.0823529, 0.168627, 0.117647, 0.909804)
 z_index = 2
-position = Vector2(219.5, 427.625)
-scale = Vector2(379, 63.25)
+position = Vector2(233, 427.625)
+scale = Vector2(406, 63.25)
 mesh = SubResource("QuadMesh_u416w")
 
 [node name="CharNameTextLabel" type="RichTextLabel" parent="."]
 z_index = 2
 layout_mode = 0
 offset_left = 67.0
-offset_top = 397.0
-offset_right = 375.0
-offset_bottom = 458.0
+offset_top = 403.0
+offset_right = 424.0
+offset_bottom = 464.0
 theme = SubResource("Theme_recq7")
 text = "Daiko Kusanagi"
 
