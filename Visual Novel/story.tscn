@@ -20,4 +20,6 @@ text = "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
 
 [node name="End_node" type="Node" parent="."]
 script = ExtResource("1_umvkh")
+jumpToNode = "Story/End_node"
+leavingChar = "Chiyo Morimiya"
 background = "Thanks"

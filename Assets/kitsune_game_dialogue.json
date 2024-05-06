@@ -554,7 +554,7 @@
   {
 	"id": "",
 	"Character name": "The Great Kiko",
-	"Dialogue": "Here, I'll lend you my soul lantern. It'll help protect you from those pesky yokai, you can press SPACE to pick it up or place it down.",
+	"Dialogue": "Here, I'll lend you my soul lantern again. I have a feeling there's going to be a yokai sneaking around.",
 	"Special effects": "",
 	"Leaving": "",
 	"Background": ""
@@ -562,7 +562,7 @@
   {
 	"id": "",
 	"Character name": "The Great Kiko",
-	"Dialogue": "Either light all the lanterns or catch the culprit when you have more lanterns lit than not. Make sure you hold your lantern when you catch them!",
+	"Dialogue": "Use my soul lantern to protect yourself from it. Press 'SPACE' to pick up or place down the lantern.",
 	"Special effects": "",
 	"Leaving": "",
 	"Background": ""
@@ -570,7 +570,47 @@
   {
 	"id": "",
 	"Character name": "The Great Kiko",
-	"Dialogue": "Come back with your findings tomorrow. I'm gonna take a nap. *Yawn* Blessings tire me out. Good night!",
+	"Dialogue": "Either light all the lanterns and then catch the culprit or catch the culprit when you have at least two lanterns lit and you are holding your lantern.",
+	"Special effects": "",
+	"Leaving": "",
+	"Background": ""
+  },
+  {
+	"id": "",
+	"Character name": "The Great Kiko",
+	"Dialogue": "There are two ways you will be able to dispell the yokai's presence.",
+	"Special effects": "",
+	"Leaving": "",
+	"Background": ""
+  },
+  {
+	"id": "",
+	"Character name": "The Great Kiko",
+	"Dialogue": "You can light TWO lanterns and catch the yokai's shadow while holding my soul lantern.",
+	"Special effects": "",
+	"Leaving": "",
+	"Background": ""
+  },
+  {
+	"id": "",
+	"Character name": "The Great Kiko",
+	"Dialogue": "Or you can light THREE lanterns and catch the yokai without the protection of my foxfire lantern.",
+	"Special effects": "",
+	"Leaving": "",
+	"Background": ""
+  },
+  {
+	"id": "",
+	"Character name": "The Great Kiko",
+	"Dialogue": "Basically, just have three lanterns on and you will overpower any evil!",
+	"Special effects": "",
+	"Leaving": "",
+	"Background": ""
+  },
+  {
+	"id": "",
+	"Character name": "The Great Kiko",
+	"Dialogue": "Anyways, come back with your findings tomorrow. I'm gonna take a nap. *Yawn* Blessings tire me out. Good night!",
 	"Special effects": "",
 	"Leaving": "",
 	"Background": ""
@@ -1265,6 +1305,14 @@
   },
   {
 	"id": "",
+	"Character name": "",
+	"Dialogue": "",
+	"Special effects": "",
+	"Leaving": "",
+	"Background": ""
+  },
+  {
+	"id": "",
 	"Character name": "Daiko Kusanagi",
 	"Dialogue": "*huff huff* Aww, you beat me...",
 	"Special effects": "",
@@ -1488,7 +1536,7 @@
 	"Background": ""
   },
   {
-	"id": "",
+	"id": "end",
 	"Character name": "Chiyo Morimiya",
 	"Dialogue": "... Yeah, I definitely had fun, Miss Kusanagi.",
 	"Special effects": "",
@@ -1496,11 +1544,11 @@
 	"Background": ""
   },
   {
-	"id": "end",
+	"id": "",
 	"Character name": "",
 	"Dialogue": "",
 	"Special effects": "",
-	"Leaving": "",
-	"Background": "Thanks"
+	"Leaving": "Chiyo Morimiya",
+	"Background": "Ending"
   }
 ]
