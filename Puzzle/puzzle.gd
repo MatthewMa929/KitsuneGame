@@ -27,6 +27,10 @@ func _ready():
 
 func _process(delta):
 	check_win_lose()
+	if check_lit():
+		map.make_grid_dark()
+	else:
+		map.make_grid_light()
 
 func check_win_lose():
 	if player.position == enemy.position && enemy.can_chase && !player.on_script:
@@ -46,13 +50,12 @@ func is_moveable(pos):
 	if next_cell == Vector2i(0, 0) or next_cell == Vector2i(0, 1): #Wall
 		print("No go")
 		return false
-	elif next_cell == Vector2i(2, 0): #Torch
-		#print("Torch")
+	elif next_cell in map.torch_cells: #Torch
+		print("Torch")
 		turn_on(coords)
 		return false
 	elif next_cell == Vector2i(2, 1):
 		return false
-	#print("Can go")
 	return true
 
 func _on_player_turn_end(curr_pos):

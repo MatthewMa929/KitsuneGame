@@ -62,6 +62,27 @@ func make_grid():
 		torch_pos.append(torches[t][0])
 	#torch_pos = [torches[0][0], torches[1][0], torches[2][0]]
 	#astar_grid.update()
+func make_grid_dark():
+	for x in range(0, grid_size[0]):
+		for y in range(0, grid_size[1]):
+			var cell_pos = [x, y]
+			var cell_posi = Vector2i(x, y)
+			var cell = curr_level.get_cell_atlas_coords(0, cell_posi)
+			if cell == Vector2i(1, 0):
+				curr_level.set_cell(0, cell_posi, 0, Vector2i(1, 1))
+			if cell == Vector2i(2, 0):
+				curr_level.set_cell(0, cell_posi, 0, Vector2i(2, 1))
+
+func make_grid_light():
+	for x in range(0, grid_size[0]):
+		for y in range(0, grid_size[1]):
+			var cell_pos = [x, y]
+			var cell_posi = Vector2i(x, y)
+			var cell = curr_level.get_cell_atlas_coords(0, cell_posi)
+			if cell == Vector2i(1, 1):
+				curr_level.set_cell(0, cell_posi, 0, Vector2i(1, 0))
+			if cell == Vector2i(2, 1):
+				curr_level.set_cell(0, cell_posi, 0, Vector2i(2, 0))
 
 func _process(delta):
 	for i in range(torches.size()):
