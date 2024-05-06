@@ -36,6 +36,9 @@ func check_win_lose():
 	if player.position == enemy.position && !enemy.can_chase && !player.on_script:
 		emit_signal("player_won")
 		print("won")
+	if map.status == [true, true, true] && !player.on_script:
+		emit_signal("player_won")
+		print("won_torches")
 
 func is_moveable(pos):
 	var coords = Vector2i(pos[0], pos[1])

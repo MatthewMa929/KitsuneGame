@@ -34,7 +34,6 @@ func _physics_process(delta):
 		#print("won")
 
 func move():
-	print(state)
 	match state:
 		WAIT:
 			if check_chase():

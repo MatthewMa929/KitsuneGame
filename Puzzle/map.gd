@@ -3,6 +3,7 @@ extends Node2D
 @onready var levelA = $TileMapA
 @onready var levelB = $TileMapB
 @onready var levelC = $TileMapC
+@onready var levelCT = $TileMapCT
 @onready var puzzle = $".."
 @onready var enemy = $Enemy
 @onready var curr_level = levelC
@@ -10,7 +11,7 @@ extends Node2D
 @onready var ori_status = status.duplicate(true)
 @onready var lit_torch_spr = $LitTorch
 @onready var unlit_torch_spr = $UnlitTorch
-@onready var stages = [levelC, levelA, levelB]
+@onready var stages = [levelCT, levelC, levelA, levelB]
 
 var cell_size = Vector2i(64, 64)
 
@@ -59,7 +60,6 @@ func make_grid():
 				print(lit_torch_sprs)
 	for t in range(0, torches.size()):
 		torch_pos.append(torches[t][0])
-	print(torches)
 	#torch_pos = [torches[0][0], torches[1][0], torches[2][0]]
 	#astar_grid.update()
 
@@ -123,9 +123,7 @@ func _on_puzzle_lantern_moved(lantern_light):
 	old_lit = lantern_light
 
 func new_puzzle():
-	print('new_puzzle()')
 	enemy.reset()
-	print(curr_level)
 	puzzle.lantern_light = []
 	torch_pos = []
 	_on_puzzle_lantern_moved(puzzle.lantern_light)

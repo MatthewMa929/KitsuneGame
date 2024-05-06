@@ -34,13 +34,11 @@ func _physics_process(delta):
 				move_timer.start()
 		
 		if Input.is_action_just_released("Turn"):
-			print(curr_pos)
 			can_move = true
 		
 		if Input.is_action_just_pressed("P_Lantern"):
 			if lantern_pos == curr_pos:
 				has_lantern = not has_lantern
-				print("has_lantern: " + str(has_lantern))
 		
 		if has_lantern:
 			lantern_pos = curr_pos
